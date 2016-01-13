@@ -13,5 +13,10 @@ namespace Barricade
         {
             return visiting_piece.Color != piece.Color;
         }
+
+        public override bool MayHist(Piece visiting_piece)
+        {
+            return visiting_piece.Color != piece.Color;
+        }
     }
 }

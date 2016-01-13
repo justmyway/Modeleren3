@@ -4,16 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Barricade
+namespace Barricade.System
 {
-    class Program
+    class ReadInput
     {
-
-        static void Main(string[] args)
+        public string Read()
         {
-            Game game = new Game();
-
-            game.Play();
+            Console.Out.Flush();
+            return Console.ReadLine();
         }
     }
 }
