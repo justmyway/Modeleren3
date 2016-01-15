@@ -8,13 +8,6 @@ namespace Barricade
 {
     public class Barricade : Piece
     {
-        public Color Color
-        {
-            get; set;
-        }
-
-        public class Field
-        {
-        }
+        public Color Color{get; set;}
     }
 }

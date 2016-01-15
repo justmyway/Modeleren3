@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Barricade.Model.Fields;
 
 namespace Barricade.View
 {
@@ -15,6 +16,10 @@ namespace Barricade.View
         {
             Tile = tile;
             value = "O";
+        }
+
+        public TileFieldView() : base()
+        {
         }
 
         public override string Print()

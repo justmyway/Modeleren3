@@ -8,7 +8,7 @@ namespace Barricade.Model.Fields
 {
     public class FinishTile : Tile
     {
-        public void Enter(Piece entering_piece)
+        public override void Enter(Piece entering_piece)
         {
             piece = entering_piece;
         }

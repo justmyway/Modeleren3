@@ -15,7 +15,7 @@ namespace Barricade.Model.Fields
             return false;
         }
 
-        public void Enter(Piece piece) {
+        public override void Enter(Piece piece) {
             this.piece = piece; 
         }
     }
