@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Barricade.View;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -11,8 +12,10 @@ namespace Barricade
         List<Player> players;
         private Player currentPlayer;
         private int dice;
+        GameView gameView;
 
         public GameController() {
+            gameView = new GameView();
             players = new List<Player>();
 
             //create Players
@@ -36,7 +39,7 @@ namespace Barricade
         public void Play()
         {
             //show map
-
+            gameView.Print();
             //throw dice
 
             //read input

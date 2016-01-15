@@ -14,6 +14,8 @@ namespace Barricade
             GameController game = new GameController();
 
             game.Play();
+
+            Console.ReadLine();
         }
     }
 }
