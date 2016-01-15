@@ -9,6 +9,7 @@ namespace Barricade.Model.Fields
     public class Tile : Field
     {
         public Piece piece { get; set; }
+        public bool Village { get; }
 
         public override void Enter(Piece piece)
         {
@@ -20,13 +21,14 @@ namespace Barricade.Model.Fields
             return visiting_piece.Color != piece.Color;
         }
 
-        public Tile()
+        public Tile(bool village)
         {
-
+            Village = village;
         }
 
-        public Tile(bool hasBarricade)
+        public Tile(bool hasBarricade, bool village)
         {
+            Village = village;
             piece = new Barricade();
         }
     }

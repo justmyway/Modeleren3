@@ -145,13 +145,13 @@ namespace Barricade
             FinishTile finishTile = new FinishTile();
             fieldViews[0, 5] = new FinishFieldView(finishTile);
 
-            Tile tile11 = new Tile();
+            Tile tile11 = new Tile(true);
             fieldViews[1, 1] = new TileFieldView(tile11);
-            Tile tile12 = new Tile();
+            Tile tile12 = new Tile(true);
             fieldViews[1, 2] = new TileFieldView(tile12);
-            Tile tile13 = new Tile();
+            Tile tile13 = new Tile(true);
             fieldViews[1, 3] = new TileFieldView(tile13);
-            Tile tile14 = new Tile();
+            Tile tile14 = new Tile(true);
             fieldViews[1, 4] = new TileFieldView(tile14);
             Tile tile15 = new Tile(true);
             fieldViews[1, 5] = new TileFieldView(tile15);
