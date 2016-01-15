@@ -11,6 +11,7 @@ namespace Barricade.Model
         public List<Player> Players { get; }
         public Player CurrentPlayer { get; set; }
         public int Dice { get; set; }
+        public List<Field> PosibleMoves { get; set; }
 
         public GameModel(List<Player> gamePlayers)
         {
