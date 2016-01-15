@@ -7,14 +7,11 @@ namespace Barricade
 {
     public class Player
     {
-        private Color color;
+        public Color Color { get; }
 
         public Player(Color color) {
-            this.color = color;
+            Color = color;
         }
 
-        public string Name() {
-            return color.ToString();
-        }
     }
 }

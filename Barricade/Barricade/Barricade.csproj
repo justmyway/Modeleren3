@@ -49,6 +49,7 @@
     <Compile Include="Piece\Barricade.cs" />
     <Compile Include="Color.cs" />
     <Compile Include="Start.cs" />
+    <Compile Include="System\ReadInput.cs" />
     <Compile Include="Tile\Field.cs" />
     <Compile Include="Tile\Forrest.cs" />
     <Compile Include="Game.cs" />
@@ -63,6 +64,10 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="Class Diagram.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controller\" />
+    <Folder Include="Model\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

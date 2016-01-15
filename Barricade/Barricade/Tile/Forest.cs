@@ -5,9 +5,9 @@ using System.Text;
 
 namespace Barricade
 {
-    public class Forrest : BigTile
+    public class Forest : BigTile
     {
-        public Forrest()
+        public Forest()
         {
             pieces = new List<Piece>();
         }

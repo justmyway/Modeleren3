@@ -3,7 +3,7 @@
   <Class Name="Barricade.Player">
     <Position X="5.5" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAACAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAgAAAAAA=</HashCode>
       <FileName>Player.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -17,12 +17,12 @@
   <Class Name="Barricade.Game">
     <Position X="3" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAAAAAAAAAA=</HashCode>
+      <HashCode>AQAAAAAAAAIAAAAAAAAAAAAAAAAAAACAoAAAAAAAAAA=</HashCode>
       <FileName>Game.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Barricade.Pawn">
-    <Position X="3" Y="3.75" Width="1.5" />
+    <Position X="3.25" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
       <FileName>Piece\Pawn.cs</FileName>
@@ -33,7 +33,7 @@
     <Lollipop Position="0.1" />
   </Class>
   <Class Name="Barricade.Barricade">
-    <Position X="1" Y="4.75" Width="1.5" />
+    <Position X="0.5" Y="5.75" Width="1.5" />
     <NestedTypes>
       <Class Name="Barricade.Barricade.Field" Collapsed="true">
         <TypeIdentifier>
@@ -107,7 +107,7 @@
     </TypeIdentifier>
   </Class>
   <Interface Name="Barricade.Piece">
-    <Position X="3" Y="2.5" Width="1.5" />
+    <Position X="5" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
       <FileName>Piece\Piece.cs</FileName>
