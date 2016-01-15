@@ -83,10 +83,23 @@ namespace Barricade.View
         
         public void DiceThrown()
         {
+            Console.Write("-- Next round --");
             SetConsoleColor(gameModel.CurrentPlayer.Color);
             Console.Write(gameModel.CurrentPlayer.Color.ToString());
             ResetConsoleColor();
             Console.WriteLine(" has thrown " + gameModel.Dice + ".");
+        }
+
+        public string ChosePosibleMove(int numberOfTries)
+        {
+            if (numberOfTries > 0)
+            {
+                SetConsoleColor(Color.RED);
+                Console.WriteLine("Is it realy that hard?....");
+                ResetConsoleColor();
+            }
+            Console.WriteLine("Inset a number of the field you would like to move to:");
+            return Console.ReadLine();
         }
 
         public void CongratulationsMessage()

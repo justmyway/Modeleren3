@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Barricade.Model.Pieces;
 
 namespace Barricade
 {
@@ -10,12 +11,6 @@ namespace Barricade
         public Pawn(Color color)
         {
             Color = color;
-        }
-
-        public Color Color
-        {
-            get;
-            set;
         }
     }
 }

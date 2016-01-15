@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Barricade
+namespace Barricade.Model.Pieces
 {
-    public interface Piece
+    public class Piece
     {
-        Color Color { get; set; }
+        public Color Color { get; set; }
+        public Field Field { get; set; }
     }
 }

@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Barricade.Model.Pieces;
 
-namespace Barricade
+namespace Barricade.Model.Fields
 {
     public class Forest : Field
     {
@@ -14,17 +15,12 @@ namespace Barricade
             pieces = new List<Piece>();
         }
 
-        public void Enter(Piece piece)
+        public override void Enter(Piece piece)
         {
             pieces.Add(piece);
         }
-
+        
         public override bool MayEnter(Piece piece)
-        {
-            throw new NotImplementedException();
-        }
-
-        public override bool MayHist(Piece piece)
         {
             throw new NotImplementedException();
         }

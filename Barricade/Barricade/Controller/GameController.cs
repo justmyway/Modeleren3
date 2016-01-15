@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
+using Barricade.Controller;
 using Barricade.Model;
 using Barricade.View;
 
@@ -50,19 +51,22 @@ namespace Barricade
                 //throw dice
                 ThrowDice();
 
+                //calculate moves
+                CalculateMoves();
+
+                //set numbers to visitable fields
+                GiveVisitableFieldsNumbers();
+
                 //show map
                 gameView.Print();
 
-                //read input
-                ReadMove();
+                //player make chose en relocate pawn
+                ChoseMove();
 
-                //calculate moves
+                //reset numbers to visitable fields
+                ResetVisitableFieldsNumbers();
 
-                //player make chose
-
-                //move pawn
-
-                if(!PlayerWon())
+                if (!PlayerWon())
                     NextPlayer();
             }
 
@@ -76,14 +80,56 @@ namespace Barricade
             gameView.DiceThrown();
         }
 
-        private void ReadMove()
+        private void CalculateMoves()
         {
-            //string input = Console.Read();
+            List<PosibleMove> posibleFields = new List<PosibleMove>();
+
+            foreach (Pawn pawn in gameModel.CurrentPlayer.Pawns)
+            {
+                FieldController controller = new FieldController();
+                posibleFields.AddRange(controller.CheckMoveOptions(pawn.Field, gameModel.Dice, null, pawn));
+            }
+
+            gameModel.PosibleMoves = posibleFields;
+        }
+
+        private void GiveVisitableFieldsNumbers()
+        {
+            int option = 1;
+            foreach (PosibleMove move in gameModel.PosibleMoves)
+            {
+                move.Field.VisitableOption = option;
+                option++;
+            }
+        }
+
+        private void ChoseMove()
+        {
+            int numberOfTries = 0;
+            int chosenMove = 0;
+            while (chosenMove > 0 && chosenMove < gameModel.PosibleMoves.Count + 1)
+            {
+                string chosenOne = gameView.ChosePosibleMove(numberOfTries);
+                chosenMove = Int32.Parse(chosenOne);
+            }
+
+            //relocate to Field
+           RelocatePawn(gameModel.PosibleMoves[chosenMove--]);
+        }
+
+        private void RelocatePawn(PosibleMove move)
+        {
+            move.Field.Enter(move.Pawn);
+        }
+
+        private void ResetVisitableFieldsNumbers()
+        {
+            foreach (PosibleMove move in gameModel.PosibleMoves) move.Field.VisitableOption = 0;
         }
 
         private bool PlayerWon()
         {
-            return gameModel.CurrentPlayer.Pieces.Count == 0;
+            return gameModel.CurrentPlayer.Pawns.Count == 0;
         }
 
         private void NextPlayer()
