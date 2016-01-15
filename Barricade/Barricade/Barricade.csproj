@@ -51,7 +51,7 @@
     <Compile Include="Start.cs" />
     <Compile Include="System\ReadInput.cs" />
     <Compile Include="Tile\Field.cs" />
-    <Compile Include="Tile\Forrest.cs" />
+    <Compile Include="Tile\Forest.cs" />
     <Compile Include="Game.cs" />
     <Compile Include="Piece\Pawn.cs" />
     <Compile Include="Piece\Piece.cs" />
@@ -60,6 +60,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tile\RestTile.cs" />
     <Compile Include="Tile\Tile.cs" />
+    <Compile Include="View\FieldView.cs" />
+    <Compile Include="View\GameView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

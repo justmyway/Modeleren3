@@ -11,7 +11,7 @@ namespace Barricade
 
         static void Main(string[] args)
         {
-            Game game = new Game();
+            GameController game = new GameController();
 
             game.Play();
         }

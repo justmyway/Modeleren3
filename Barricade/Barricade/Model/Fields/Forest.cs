@@ -5,8 +5,10 @@ using System.Text;
 
 namespace Barricade
 {
-    public class Forest : BigTile
+    public class Forest : Field
     {
+        private List<Piece> pieces;
+
         public Forest()
         {
             pieces = new List<Piece>();
@@ -16,7 +18,5 @@ namespace Barricade
         {
             pieces.Add(piece);
         }
-
-
     }
 }

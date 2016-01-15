@@ -6,13 +6,13 @@ using System.Text;
 
 namespace Barricade
 {
-    public class Game
+    public class GameController
     {
         List<Player> players;
         private Player currentPlayer;
         private int dice;
 
-        public Game() {
+        public GameController() {
             players = new List<Player>();
 
             //create Players
