@@ -43,34 +43,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BigTile.cs" />
-    <Compile Include="BlackTile.cs" />
-    <Compile Include="FinishTile.cs" />
-    <Compile Include="Piece\Barricade.cs" />
-    <Compile Include="Color.cs" />
-    <Compile Include="Start.cs" />
-    <Compile Include="System\ReadInput.cs" />
-    <Compile Include="Tile\Field.cs" />
-    <Compile Include="Tile\Forest.cs" />
-    <Compile Include="Game.cs" />
-    <Compile Include="Piece\Pawn.cs" />
-    <Compile Include="Piece\Piece.cs" />
-    <Compile Include="Player.cs" />
+    <Compile Include="Model\Fields\BlackTile.cs" />
+    <Compile Include="Model\Fields\FinishTile.cs" />
+    <Compile Include="Model\Pieces\Barricade.cs" />
+    <Compile Include="Model\Color.cs" />
+    <Compile Include="Model\Fields\Field.cs" />
+    <Compile Include="Model\Fields\Forest.cs" />
+    <Compile Include="Controller\GameController.cs" />
+    <Compile Include="Model\Pieces\Pawn.cs" />
+    <Compile Include="Model\Pieces\Piece.cs" />
+    <Compile Include="Model\Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tile\RestTile.cs" />
-    <Compile Include="Tile\Tile.cs" />
+    <Compile Include="Model\Fields\RestTile.cs" />
+    <Compile Include="Model\Fields\Tile.cs" />
     <Compile Include="View\FieldView.cs" />
     <Compile Include="View\GameView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Class Diagram.cd" />
+    <None Include="Model\Model.cd" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controller\" />
-    <Folder Include="Model\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

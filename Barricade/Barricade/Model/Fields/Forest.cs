@@ -18,5 +18,15 @@ namespace Barricade
         {
             pieces.Add(piece);
         }
+
+        public override bool MayEnter(Piece piece)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override bool MayHist(Piece piece)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

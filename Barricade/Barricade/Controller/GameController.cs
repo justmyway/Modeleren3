@@ -25,7 +25,12 @@ namespace Barricade
                 players.Add(player);
             }
 
-            Console.Read();
+            CreateField();
+        }
+
+        public void CreateField()
+        {
+
         }
 
         public void Play()
