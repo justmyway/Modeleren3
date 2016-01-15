@@ -26,7 +26,7 @@ namespace Barricade.Model.Fields
             Village = village;
         }
 
-        public Tile(bool hasBarricade, bool village)
+        public Tile( bool village, bool hasBarricade)
         {
             Village = village;
             piece = new Barricade();

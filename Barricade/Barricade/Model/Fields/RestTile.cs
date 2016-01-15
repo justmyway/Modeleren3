@@ -8,6 +8,10 @@ namespace Barricade.Model.Fields
 {
     public class RestTile : Tile
     {
+        public RestTile(bool village) :base(village)
+        {
+
+        }
         public override bool MayEnter(Piece visiting_piece) {
             if (base.MayEnter(visiting_piece) && piece == null)
                 return true;
