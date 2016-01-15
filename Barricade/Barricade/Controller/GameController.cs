@@ -3,29 +3,38 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
+using Barricade.Model;
+using Barricade.View;
 
 namespace Barricade
 {
     public class GameController
     {
-        List<Player> players;
-        private Player currentPlayer;
-        private int dice;
+        private GameModel gameModel;
+        private GameView gameView;
 
-        public GameController() {
-            players = new List<Player>();
-
-            //create Players
+        public GameController()
+        {
+            //create Players 
+            List<Player> players = new List<Player>();
+            
             foreach (Color color in Enum.GetValues(typeof(Color)))
             {
                 if(color == Color.NONE)
                     continue;
                 
-                Player player = new Player(color);
-                players.Add(player);
+                players.Add(new Player(color));
             }
 
+            gameModel = new GameModel(players);
+
+            //current player
+            gameModel.CurrentPlayer = gameModel.Players.First();
+
             CreateField();
+
+            //create view
+            gameView = new GameView(gameModel);
         }
 
         public void CreateField()
@@ -35,25 +44,55 @@ namespace Barricade
 
         public void Play()
         {
-            //show map
+            while (!PlayerWon())
+            {
+                //throw dice
+                ThrowDice();
 
-            //throw dice
+                //show map
+                //gameView.print();
 
-            //read input
+                //read input
+                ReadMove();
 
-            //calculate moves
+                //calculate moves
 
-            //player make chose
+                //player make chose
 
-            //move pawn
+                //move pawn
 
+                if(!PlayerWon())
+                    NextPlayer();
+            }
 
-            NextPlayer();
+            CongratulationsMessage();
+        }
+
+        private void ThrowDice()
+        {
+            Random rnd = new Random();
+            gameModel.Dice = rnd.Next(1, 7);
+            gameView.DiceThrown();
+        }
+
+        private void ReadMove()
+        {
+            //string input = Console.Read();
+        }
+
+        private bool PlayerWon()
+        {
+            return gameModel.CurrentPlayer.Pieces.Count == 0;
         }
 
         private void NextPlayer()
         {
-            currentPlayer = players.Count >= players.IndexOf(currentPlayer) + 1 ? players.First() : players[players.IndexOf(currentPlayer) + 1];
+            gameModel.CurrentPlayer = gameModel.Players.Count >= gameModel.Players.IndexOf(gameModel.CurrentPlayer) + 1 ? gameModel.Players.First() : gameModel.Players[gameModel.Players.IndexOf(gameModel.CurrentPlayer) + 1];
+        }
+
+        private void CongratulationsMessage()
+        {
+            Console.WriteLine("-- Congratulations player " + gameModel.CurrentPlayer.Color.ToString() + " you have won!!! --");
         }
     }
 }

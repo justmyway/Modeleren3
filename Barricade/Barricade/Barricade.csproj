@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Model\Fields\BlackTile.cs" />
     <Compile Include="Model\Fields\FinishTile.cs" />
+    <Compile Include="Model\GameModel.cs" />
     <Compile Include="Model\Pieces\Barricade.cs" />
     <Compile Include="Model\Color.cs" />
     <Compile Include="Model\Fields\Field.cs" />
@@ -59,6 +60,7 @@
     <Compile Include="Model\Fields\Tile.cs" />
     <Compile Include="View\FieldView.cs" />
     <Compile Include="View\GameView.cs" />
+    <Compile Include="View\ViewColor.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
