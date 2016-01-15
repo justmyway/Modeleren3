@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Barricade.View;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -12,6 +13,8 @@ namespace Barricade
     {
         private GameModel gameModel;
         private GameView gameView;
+        GameView gameView;
+            gameView = new GameView();
 
         public GameController()
         {
@@ -50,7 +53,7 @@ namespace Barricade
                 ThrowDice();
 
                 //show map
-                //gameView.print();
+                gameView.Print();
 
                 //read input
                 ReadMove();

@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace Barricade.View
 {
-    class FieldView
+    public class FieldView
     {
+        public string Value { get; }
+
+        public FieldView()
+        {
+            Value = "O ";
+        }
     }
 }
