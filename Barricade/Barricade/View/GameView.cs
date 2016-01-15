@@ -55,7 +55,14 @@ namespace Barricade.View
             {
                 for (int y = 0; y < fields.GetLength(1); y++)
                 {
-                    Console.Write(fields[x, y].Value);
+                    if (fields[x,y] != null)
+                    {
+                        Console.Write(fields[x, y].Value);
+                    }
+                    else
+                    {
+                        Console.Write("  ");
+                    }
                     Console.Write(horizontalConnections[x, y]);
                     Console.Write(horizontalConnections[x, y]);
                 }
