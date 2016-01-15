@@ -19,7 +19,12 @@ namespace Barricade.Model.Fields
         {
             pieces.Add(piece);
         }
-        
+
+        public override void RemovePiece(Piece piece)
+        {
+            pieces.Remove(piece);
+        }
+
         public override bool MayEnter(Piece piece)
         {
             throw new NotImplementedException();

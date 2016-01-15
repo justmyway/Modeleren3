@@ -22,7 +22,7 @@ namespace Barricade
             
             foreach (Color color in Enum.GetValues(typeof(Color)))
             {
-                if(color == Color.NONE)
+                if(color == Color.WHITE)
                     continue;
                 
                 players.Add(new Player(color));
@@ -116,7 +116,9 @@ namespace Barricade
 
         private void RelocatePawn(PosibleMove move)
         {
+            move.Pawn.Field.RemovePiece(move.Pawn);
             move.Field.Enter(move.Pawn);
+            move.Pawn.Field = move.Pawn.Field;
         }
 
         private void ResetVisitableFieldsNumbers()

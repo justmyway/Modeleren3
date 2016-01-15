@@ -11,6 +11,6 @@ namespace Barricade
         GREEN,
         YELLOW,
         BLUE,
-        NONE
+        WHITE
     }
 }

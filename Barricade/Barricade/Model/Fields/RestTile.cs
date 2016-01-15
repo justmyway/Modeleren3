@@ -8,15 +8,26 @@ namespace Barricade.Model.Fields
 {
     public class RestTile : Tile
     {
-        public override bool MayEnter(Piece visiting_piece) {
-            if (base.MayEnter(visiting_piece) && piece == null)
-                return true;
+        public RestTile(bool village) : base(village)
+        {
+        }
 
-            return false;
+        public RestTile(bool hasBarricade, bool village) : base(hasBarricade, village)
+        {
+        }
+
+        public override bool MayEnter(Piece visiting_piece)
+        {
+            return Piece == null;
         }
 
         public override void Enter(Piece piece) {
-            this.piece = piece; 
+            if(Piece != null)
+                Console.WriteLine("/* This move is not posible */");
+
+            Piece = piece; 
         }
+
+        
     }
 }

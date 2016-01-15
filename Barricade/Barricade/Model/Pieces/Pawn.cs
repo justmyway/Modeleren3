@@ -8,9 +8,12 @@ namespace Barricade
 {
     public class Pawn : Piece
     {
-        public Pawn(Color color)
+        public Pawn(Color color, Player owner)
         {
             Color = color;
+            Owner = owner;
         }
+
+        public Player Owner { get; }
     }
 }

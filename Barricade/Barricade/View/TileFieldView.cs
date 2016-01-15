@@ -9,7 +9,7 @@ namespace Barricade.View
 {
     public class TileFieldView : FieldView
     {
-        public Tile Tile { get; }
+        public Tile Tile { get; set; }
         protected string value;
 
         public TileFieldView(Tile tile)
