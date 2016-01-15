@@ -13,8 +13,6 @@ namespace Barricade
     {
         private GameModel gameModel;
         private GameView gameView;
-        GameView gameView;
-            gameView = new GameView();
 
         public GameController()
         {
@@ -95,7 +93,7 @@ namespace Barricade
 
         private void CongratulationsMessage()
         {
-            Console.WriteLine("-- Congratulations player " + gameModel.CurrentPlayer.Color.ToString() + " you have won!!! --");
+            gameView.CongratulationsMessage();
         }
     }
 }

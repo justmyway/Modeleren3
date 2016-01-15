@@ -14,6 +14,7 @@ namespace Barricade
             Color = color;
 
             //pieces maken
+            Pieces = new List<Piece>();
         }
 
     }

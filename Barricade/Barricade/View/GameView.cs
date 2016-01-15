@@ -54,7 +54,7 @@ namespace Barricade.View
                 { ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' }, };
 
         }
-                
+
         public void Print()
         {
             for (int x = 0; x < fields.GetLength(0); x++)
@@ -87,6 +87,13 @@ namespace Barricade.View
             Console.Write(gameModel.CurrentPlayer.Color.ToString());
             ResetConsoleColor();
             Console.WriteLine(" has thrown " + gameModel.Dice + ".");
+        }
+
+        public void CongratulationsMessage()
+        {
+            SetConsoleColor(gameModel.CurrentPlayer.Color);
+            Console.WriteLine("-- Congratulations player " + gameModel.CurrentPlayer.Color.ToString() + " you have won!!! --");
+            ResetConsoleColor();
         }
     }
 }

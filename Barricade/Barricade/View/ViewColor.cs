@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Barricade.View
 {
-    class ViewColor
+    public class ViewColor
     {
         private Dictionary<Color, ConsoleColor> ConsoleColors;
 
