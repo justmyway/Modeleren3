@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace Barricade.View
 {
-    public abstract class FieldView
+    public class RestFieldView : TileFieldView
     {
-        public FieldView()
+        public RestFieldView(Tile field) :base(field)
         {
+            value = "R";
         }
-
-        public abstract string Print();
     }
 }
