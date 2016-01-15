@@ -24,9 +24,9 @@ namespace Barricade.View
 
         public override string Print()
         {
-            if (Tile.piece != null)
+            if (Tile.Piece != null)
             {
-                if (Tile.piece.GetType() == typeof(Barricade))
+                if (Tile.Piece.GetType() == typeof(Barricade))
                 {
                     return value + "X";
                 }

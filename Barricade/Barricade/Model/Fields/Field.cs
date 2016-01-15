@@ -17,7 +17,7 @@ namespace Barricade
 
         public List<Field> CorrespondingFields { get; set; }
         public int VisitableOption { get; set; }
-        public bool Village { get; }
+        public bool Village { get; set; }
         public abstract bool MayEnter(Piece piece);
         public abstract void Enter(Piece piece);
         public abstract void RemovePiece(Piece piece);

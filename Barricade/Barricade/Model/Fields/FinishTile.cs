@@ -14,7 +14,7 @@ namespace Barricade.Model.Fields
         }
         public override void Enter(Piece entering_piece)
         {
-            piece = entering_piece;
+            Piece = entering_piece;
         }
     }
 }
