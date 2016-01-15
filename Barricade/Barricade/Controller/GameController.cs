@@ -309,6 +309,168 @@ namespace Barricade
             Tile tile1010 = new Tile(false);
             fieldViews[10, 10] = new TileFieldView(tile1010);
             gameView.SetField(fieldViews);
+
+            tile11.CorrespondingFields.Add(tile21);
+            tile11.CorrespondingFields.Add(tile12);
+            tile12.CorrespondingFields.Add(tile11);
+            tile12.CorrespondingFields.Add(tile13);
+            tile13.CorrespondingFields.Add(tile12);
+            tile13.CorrespondingFields.Add(tile14);
+            tile14.CorrespondingFields.Add(tile13);
+            tile14.CorrespondingFields.Add(tile15);
+            tile15.CorrespondingFields.Add(finishTile);
+            tile15.CorrespondingFields.Add(tile14);
+            tile15.CorrespondingFields.Add(tile16);
+            tile16.CorrespondingFields.Add(tile15);
+            tile16.CorrespondingFields.Add(tile17);
+            tile17.CorrespondingFields.Add(tile16);
+            tile17.CorrespondingFields.Add(tile18);
+            tile18.CorrespondingFields.Add(tile17);
+            tile18.CorrespondingFields.Add(tile19);
+            tile19.CorrespondingFields.Add(tile18);
+            tile19.CorrespondingFields.Add(tile29);
+
+            tile21.CorrespondingFields.Add(tile11);
+            tile21.CorrespondingFields.Add(tile22);
+            tile22.CorrespondingFields.Add(tile21);
+            tile22.CorrespondingFields.Add(tile23);
+            tile23.CorrespondingFields.Add(tile22);
+            tile23.CorrespondingFields.Add(tile24);
+            tile24.CorrespondingFields.Add(tile23);
+            tile24.CorrespondingFields.Add(tile25);
+            tile25.CorrespondingFields.Add(tile35);
+            tile25.CorrespondingFields.Add(tile24);
+            tile25.CorrespondingFields.Add(tile26);
+            tile26.CorrespondingFields.Add(tile25);
+            tile26.CorrespondingFields.Add(tile27);
+            tile27.CorrespondingFields.Add(tile26);
+            tile27.CorrespondingFields.Add(tile28);
+            tile28.CorrespondingFields.Add(tile27);
+            tile28.CorrespondingFields.Add(tile29);
+            tile29.CorrespondingFields.Add(tile28);
+            tile29.CorrespondingFields.Add(tile19);
+
+            tile32.CorrespondingFields.Add(tile42);
+            tile32.CorrespondingFields.Add(tile33);
+            tile33.CorrespondingFields.Add(tile32);
+            tile33.CorrespondingFields.Add(tile34);
+            tile34.CorrespondingFields.Add(tile33);
+            tile34.CorrespondingFields.Add(tile35);
+            tile35.CorrespondingFields.Add(tile25);
+            tile35.CorrespondingFields.Add(tile34);
+            tile35.CorrespondingFields.Add(tile36);
+            tile36.CorrespondingFields.Add(tile35);
+            tile36.CorrespondingFields.Add(tile37);
+            tile37.CorrespondingFields.Add(tile36);
+            tile37.CorrespondingFields.Add(tile38);
+            tile38.CorrespondingFields.Add(tile37);
+            tile38.CorrespondingFields.Add(tile48);
+
+            tile42.CorrespondingFields.Add(tile32);
+            tile42.CorrespondingFields.Add(tile43);
+            tile43.CorrespondingFields.Add(tile42);
+            tile43.CorrespondingFields.Add(tile44);
+            tile44.CorrespondingFields.Add(tile43);
+            tile44.CorrespondingFields.Add(tile45);
+            tile45.CorrespondingFields.Add(tile55);
+            tile45.CorrespondingFields.Add(tile44);
+            tile45.CorrespondingFields.Add(tile46);
+            tile46.CorrespondingFields.Add(tile45);
+            tile46.CorrespondingFields.Add(tile47);
+            tile47.CorrespondingFields.Add(tile46);
+            tile47.CorrespondingFields.Add(tile48);
+            tile48.CorrespondingFields.Add(tile47);
+            tile48.CorrespondingFields.Add(tile38);
+
+            tile53.CorrespondingFields.Add(tile73);
+            tile53.CorrespondingFields.Add(tile54);
+            tile54.CorrespondingFields.Add(tile53);
+            tile54.CorrespondingFields.Add(tile55);
+            tile55.CorrespondingFields.Add(tile45);
+            tile55.CorrespondingFields.Add(tile54);
+            tile55.CorrespondingFields.Add(tile56);
+            tile56.CorrespondingFields.Add(tile55);
+            tile56.CorrespondingFields.Add(tile57);
+            tile57.CorrespondingFields.Add(tile56);
+            tile57.CorrespondingFields.Add(tile77);
+
+            forest.CorrespondingFields.Add(tile55);
+
+            tile70.CorrespondingFields.Add(tile80);
+            tile70.CorrespondingFields.Add(tile71);
+            tile71.CorrespondingFields.Add(tile70);
+            tile71.CorrespondingFields.Add(tile72);
+            tile72.CorrespondingFields.Add(tile82);
+            tile72.CorrespondingFields.Add(tile71);
+            tile72.CorrespondingFields.Add(tile73);
+            tile73.CorrespondingFields.Add(tile53);
+            tile73.CorrespondingFields.Add(tile72);
+            tile73.CorrespondingFields.Add(tile74);
+            tile74.CorrespondingFields.Add(tile73);
+            tile74.CorrespondingFields.Add(tile75);
+            tile75.CorrespondingFields.Add(tile85);
+            tile75.CorrespondingFields.Add(tile74);
+            tile75.CorrespondingFields.Add(tile76);
+            tile76.CorrespondingFields.Add(tile75);
+            tile76.CorrespondingFields.Add(tile77);
+            tile77.CorrespondingFields.Add(tile57);
+            tile77.CorrespondingFields.Add(tile76);
+            tile77.CorrespondingFields.Add(tile78);
+            tile78.CorrespondingFields.Add(tile88);
+            tile78.CorrespondingFields.Add(tile77);
+            tile78.CorrespondingFields.Add(tile79);
+            tile79.CorrespondingFields.Add(tile78);
+            tile79.CorrespondingFields.Add(tile710);
+            tile710.CorrespondingFields.Add(tile79);
+            tile710.CorrespondingFields.Add(tile810);
+
+            tile80.CorrespondingFields.Add(tile70);
+            tile80.CorrespondingFields.Add(tile81);
+            tile81.CorrespondingFields.Add(tile80);
+            tile81.CorrespondingFields.Add(tile82);
+            tile82.CorrespondingFields.Add(tile72);
+            tile82.CorrespondingFields.Add(tile81);
+            tile82.CorrespondingFields.Add(tile83);
+            tile83.CorrespondingFields.Add(tile53);
+            tile83.CorrespondingFields.Add(tile82);
+            tile83.CorrespondingFields.Add(tile84);
+            tile84.CorrespondingFields.Add(tile83);
+            tile84.CorrespondingFields.Add(tile85);
+            tile85.CorrespondingFields.Add(tile75);
+            tile85.CorrespondingFields.Add(tile84);
+            tile85.CorrespondingFields.Add(tile86);
+            tile86.CorrespondingFields.Add(tile85);
+            tile86.CorrespondingFields.Add(tile87);
+            tile87.CorrespondingFields.Add(tile57);
+            tile87.CorrespondingFields.Add(tile86);
+            tile87.CorrespondingFields.Add(tile88);
+            tile88.CorrespondingFields.Add(tile88);
+            tile88.CorrespondingFields.Add(tile87);
+            tile88.CorrespondingFields.Add(tile89);
+            tile89.CorrespondingFields.Add(tile78);
+            tile89.CorrespondingFields.Add(tile810);
+            tile810.CorrespondingFields.Add(tile89);
+            tile810.CorrespondingFields.Add(tile710);
+
+            tile100.CorrespondingFields.Add(tile81);
+            tile101.CorrespondingFields.Add(tile81);
+            tile90.CorrespondingFields.Add(tile81);
+            tile91.CorrespondingFields.Add(tile81);
+
+            tile103.CorrespondingFields.Add(tile83);
+            tile104.CorrespondingFields.Add(tile83);
+            tile93.CorrespondingFields.Add(tile83);
+            tile94.CorrespondingFields.Add(tile83);
+
+            tile106.CorrespondingFields.Add(tile76);
+            tile107.CorrespondingFields.Add(tile76);
+            tile96.CorrespondingFields.Add(tile76);
+            tile97.CorrespondingFields.Add(tile76);
+
+            tile109.CorrespondingFields.Add(tile79);
+            tile1010.CorrespondingFields.Add(tile79);
+            tile99.CorrespondingFields.Add(tile79);
+            tile910.CorrespondingFields.Add(tile79);
         }
     }
 }

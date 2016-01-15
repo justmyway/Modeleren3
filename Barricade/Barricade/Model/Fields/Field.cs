@@ -11,6 +11,7 @@ namespace Barricade
         protected Field()
         {
             VisitableOption = 0;
+            CorrespondingFields = new List<Field>();
         }
 
         public List<Field> CorrespondingFields { get; set; }
