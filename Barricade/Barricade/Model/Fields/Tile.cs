@@ -7,7 +7,7 @@ namespace Barricade
 {
     public class Tile : Field
     {
-        protected Piece piece;
+        public Piece piece { get; set; }
 
         public override bool MayEnter(Piece visiting_piece)
         {
@@ -17,6 +17,16 @@ namespace Barricade
         public override bool MayHist(Piece visiting_piece)
         {
             return visiting_piece.Color != piece.Color;
+        }
+
+        public Tile()
+        {
+
+        }
+
+        public Tile(bool hasBarricade)
+        {
+            piece = new Barricade();
         }
     }
 }

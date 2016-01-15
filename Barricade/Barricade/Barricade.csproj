@@ -59,7 +59,11 @@
     <Compile Include="Model\Fields\RestTile.cs" />
     <Compile Include="Model\Fields\Tile.cs" />
     <Compile Include="View\FieldView.cs" />
+    <Compile Include="View\FinishFieldView.cs" />
+    <Compile Include="View\ForestFieldView.cs" />
     <Compile Include="View\GameView.cs" />
+    <Compile Include="View\RestFieldView.cs" />
+    <Compile Include="View\TileFieldView.cs" />
     <Compile Include="View\ViewColor.cs" />
   </ItemGroup>
   <ItemGroup>

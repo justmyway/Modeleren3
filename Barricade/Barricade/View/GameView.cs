@@ -11,23 +11,14 @@ namespace Barricade.View
     {
     	private GameModel gameModel;
     
-        FieldView[,] fields;
+        private FieldView[,] fields;
         char[,] horizontalConnections;
         char[,] verticalConnections;
 
         public GameView(GameModel gameModel)
-        {
-        
+        {     
         	this.gameModel = gameModel;
-        
-            fields = new FieldView[11,11];
-            for (int x = 0; x < fields.GetLength(0); x ++)
-            {
-                for (int y = 0; y < fields.GetLength(1); y++)
-                {
-                    fields[x, y] = new FieldView();
-                }
-            }
+
             horizontalConnections = new char[11, 11] { 
                 { ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' }, 
                 { ' ', '-', '-', '-', '-', '-', '-', '-', '-', ' ', ' ' }, 
@@ -55,27 +46,32 @@ namespace Barricade.View
 
         }
 
+        public void SetField(FieldView[,] fieldViews)
+        {
+            fields = fieldViews;
+        }
+
         public void Print()
         {
-            for (int x = 0; x < fields.GetLength(0); x++)
+            for (int y = 0; y < fields.GetLength(0); y++)
             {
-                for (int y = 0; y < fields.GetLength(1); y++)
+                for (int x = 0; x < fields.GetLength(1); x++)
                 {
-                    if (fields[x,y] != null)
+                    if (fields[y,x] != null)
                     {
-                        Console.Write(fields[x, y].Value);
+                        Console.Write(fields[y, x].Print());
                     }
                     else
                     {
                         Console.Write("  ");
                     }
-                    Console.Write(horizontalConnections[x, y]);
-                    Console.Write(horizontalConnections[x, y]);
+                    Console.Write(horizontalConnections[y, x]);
+                    Console.Write(horizontalConnections[y, x]);
                 }
                 Console.WriteLine();
-                for (int y = 0; y < verticalConnections.GetLength(1); y++)
+                for (int x = 0; x < verticalConnections.GetLength(1); x++)
                 {
-                    Console.Write(verticalConnections[x,y] + "   ");
+                    Console.Write(verticalConnections[y,x] + "   ");
                 }
                 Console.WriteLine();
             }
