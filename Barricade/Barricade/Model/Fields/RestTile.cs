@@ -11,6 +11,13 @@ namespace Barricade.Model.Fields
         public RestTile(bool village) : base(village)
         {
         }
+        public RestTile(bool hasBarricade, bool village) : base(hasBarricade, village)
+        {
+        }
+        
+        public override bool MayEnter(Piece visiting_piece) {
+            return Piece == null;
+        }
 
         public RestTile(bool hasBarricade, bool village) : base(hasBarricade, village)
         {

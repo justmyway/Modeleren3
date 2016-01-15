@@ -8,6 +8,10 @@ namespace Barricade.Model.Fields
 {
     public class FinishTile : Tile
     {
+        public FinishTile() :base(false)
+        {
+
+        }
         public override void Enter(Piece entering_piece)
         {
             piece = entering_piece;

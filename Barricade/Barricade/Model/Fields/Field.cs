@@ -12,6 +12,7 @@ namespace Barricade
         {
             VisitableOption = 0;
             Village = false;
+            CorrespondingFields = new List<Field>();
         }
 
         public List<Field> CorrespondingFields { get; set; }
