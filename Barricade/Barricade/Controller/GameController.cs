@@ -90,7 +90,7 @@ namespace Barricade.Controller
             {
                 FieldController controller = new FieldController();
                 List<Field> fields = new List<Field>();
-                posibleFields.AddRange(controller.CheckMoveOptions(pawn.Field,gameModel.Dice, fields, pawn));
+                posibleFields.AddRange(controller.CheckMoveOptions(pawn.Field,2, fields, pawn));
             }
 
             gameModel.PosibleMoves = posibleFields;
@@ -478,10 +478,10 @@ namespace Barricade.Controller
             tile93.CorrespondingFields.Add(tile83);
             tile94.CorrespondingFields.Add(tile83);
 
-            tile106.CorrespondingFields.Add(tile86);
-            tile107.CorrespondingFields.Add(tile86);
-            tile96.CorrespondingFields.Add(tile86);
-            tile97.CorrespondingFields.Add(tile86);
+            tile106.CorrespondingFields.Add(tile87);
+            tile107.CorrespondingFields.Add(tile87);
+            tile96.CorrespondingFields.Add(tile87);
+            tile97.CorrespondingFields.Add(tile87);
 
             tile109.CorrespondingFields.Add(tile89);
             tile1010.CorrespondingFields.Add(tile89);
