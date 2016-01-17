@@ -115,10 +115,12 @@ namespace Barricade.Controller
         {
             int numberOfTries = 0;
             int chosenMove = 0;
-            while (chosenMove > 0 && chosenMove < gameModel.PosibleMoves.Count + 1)
+            while (true)
             {
                 string chosenOne = gameView.ChosePosibleMove(numberOfTries);
                 chosenMove = Int32.Parse(chosenOne);
+                if (chosenMove > 0 && chosenMove < gameModel.PosibleMoves.Count + 1)
+                    break;                    
             }
 
             //relocate to Field

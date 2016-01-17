@@ -96,9 +96,7 @@ namespace Barricade.View
             }
             Console.WriteLine("Inset a number of the field you would like to move to:");
             Console.Out.Flush();
-            string input = Console.ReadLine();
-            Console.WriteLine("iput is read");
-            return input;
+            return Console.ReadLine();
         }
 
         public void CongratulationsMessage()
