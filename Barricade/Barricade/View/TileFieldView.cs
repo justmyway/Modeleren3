@@ -39,8 +39,13 @@ namespace Barricade.View
                 ResetConsoleColor();
                 if ( Tile.VisitableOption != 0)
                 {
-                    Console.Write(Tile.VisitableOption);
+                    Console.Write(Tile.VisitableOption.ToString() + ",");
                 }                
+                return;
+            }
+            if (Tile.VisitableOption != 0)
+            {
+                Console.Write(Tile.VisitableOption.ToString());
                 return;
             }
             Console.Write(" ");

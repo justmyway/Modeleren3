@@ -37,7 +37,6 @@ namespace Barricade.Controller
             //Nieghbour fields
             foreach (Field visitingfield in field.CorrespondingFields)
             {
-                Console.WriteLine(visitingfield);
                 if (!previousFields.Contains(visitingfield))
                 {
                     FieldController visitingController = new FieldController();
