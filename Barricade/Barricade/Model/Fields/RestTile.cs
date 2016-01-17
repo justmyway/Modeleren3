@@ -26,7 +26,8 @@ namespace Barricade.Model.Fields
             if(Piece != null)
                 Console.WriteLine("/* This move is not posible */");
 
-            Piece = piece; 
+            Piece = piece;
+            Piece.Field = this;
         }
 
         

@@ -37,14 +37,21 @@ namespace Barricade.View
                     Console.Write("P");
                 }
                 ResetConsoleColor();
-                                
-                return;
+                if (Tile.VisitableOption == 0)
+                    return;
             }
             if (Tile.VisitableOption != 0)
             {
+                SetConsoleColor(ConsoleColor.Magenta);
                 Console.Write(Tile.VisitableOption);
+                ResetConsoleColor();
+                return;
             }
-            Console.Write(" ");
+            else
+            {
+                Console.Write(" ");
+            }
+            
         }
     }
 }

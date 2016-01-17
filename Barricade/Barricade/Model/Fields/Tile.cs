@@ -88,6 +88,7 @@ namespace Barricade.Model.Fields
                     pawn.Owner.RelocateToStart(pawn);
                 }
             }
+            Piece.Field = this;
         }
 
         public override void RemovePiece(Piece piece)

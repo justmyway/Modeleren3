@@ -135,7 +135,6 @@ namespace Barricade.Controller
         {
             move.Pawn.Field.RemovePiece(move.Pawn);
             move.Field.Enter(move.Pawn);
-            move.Pawn.Field = move.Pawn.Field;
         }
 
         private void ResetVisitableFieldsNumbers()
