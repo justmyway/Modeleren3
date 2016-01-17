@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Barricade.Controller.FieldController" Collapsed="true">
+    <Position X="17.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controller\FieldController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Barricade.Controller.GameController" Collapsed="true">
+    <Position X="19" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQIgBAgAAAAAgAAAAAAAAAEAgIAQQAICACA=</HashCode>
+      <FileName>Controller\GameController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Barricade.Controller.PlayerController" Collapsed="true">
+    <Position X="19" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAABAAAAAAAAACAAAAAAEAACMAAQCAAAAAAA=</HashCode>
+      <FileName>Controller\PlayerController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Barricade.Field" Collapsed="true">
+    <Position X="8" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAgAAAAAEQAAAAAEAAAFAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Fields\Field.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Barricade.Barricade" Collapsed="true">
+    <Position X="12.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Pieces\Barricade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Barricade.Model.Fields.FinishTile" Collapsed="true">
+    <Position X="8" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAFAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Fields\FinishTile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Barricade.Model.Fields.Forest" Collapsed="true">
+    <Position X="5.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAAAAAAAAAAFAAggAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Fields\Forest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Barricade.Model.Fields.RestTile" Collapsed="true">
+    <Position X="10.25" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAFAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Fields\RestTile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Barricade.Model.Fields.Tile" Collapsed="true">
+    <Position X="9" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAAAAAAAAAAFAAgAAAAAIAAAAAA=</HashCode>
+      <FileName>Model\Fields\Tile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Barricade.Model.GameModel" Collapsed="true">
+    <Position X="20.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAAgAAAAAAAAgAEAAAA=</HashCode>
+      <FileName>Model\GameModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Barricade.Model.Player" Collapsed="true">
+    <Position X="17.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAEAAAQAAAAAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>Model\Player.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Barricade.Model.PosibleMove" Collapsed="true">
+    <Position X="20.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>Model\PosibleMove.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Barricade.Model.Pieces.Pawn" Collapsed="true">
+    <Position X="14.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Pieces\Pawn.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Barricade.Model.Pieces.Piece" Collapsed="true">
+    <Position X="13.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAgAA=</HashCode>
+      <FileName>Model\Pieces\Piece.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Barricade.View.FieldView" Collapsed="true">
+    <Position X="8" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>View\FieldView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Barricade.View.FinishFieldView" Collapsed="true">
+    <Position X="8" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\FinishFieldView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Barricade.View.ForestFieldView" Collapsed="true">
+    <Position X="10.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEgAA=</HashCode>
+      <FileName>View\ForestFieldView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Barricade.View.GameView" Collapsed="true">
+    <Position X="12.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACBAAgIAAAAAQAAAAAAgAAAAAAAAAAACAAAAIIEAAA=</HashCode>
+      <FileName>View\GameView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Barricade.View.PlayerView" Collapsed="true">
+    <Position X="14.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\PlayerView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Barricade.View.RestFieldView" Collapsed="true">
+    <Position X="5.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\RestFieldView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Barricade.View.TileFieldView" Collapsed="true">
+    <Position X="7" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAEAQA=</HashCode>
+      <FileName>View\TileFieldView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Barricade.View.ViewColor" Collapsed="true">
+    <Position X="10.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAgAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\ViewColor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="Barricade.Color" Collapsed="true">
+    <Position X="17.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAQIAAAAAAAAAAAgAAAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>Model\Color.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
