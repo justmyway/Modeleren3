@@ -15,6 +15,9 @@ namespace Barricade
         private GameModel gameModel;
         private GameView gameView;
 
+        //setup variables
+        private Field forest;
+
         public GameController()
         {
             //create Players 
@@ -226,7 +229,7 @@ namespace Barricade
             Tile tile57 = new Tile(false);
             fieldViews[5, 7] = new TileFieldView(tile57);
 
-            Field forest = new Forest();
+            forest = new Forest();
             fieldViews[6, 5] = new ForestFieldView(forest);
             fieldViews[6, 4] = new ForestFieldView(forest);
             fieldViews[6, 6] = new ForestFieldView(forest);
