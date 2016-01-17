@@ -58,7 +58,7 @@ namespace Barricade.Controller
                 GiveVisitableFieldsNumbers();
 
                 //show map
-                ShowMap();
+                gameView.Print();
 
                 //player make chose en relocate pawn
                 ChoseMove();
@@ -82,25 +82,25 @@ namespace Barricade.Controller
 
         private void CalculateMoves()
         {
-            gameModel.PosibleMoves.Clear();
+            gameModel.PossibleMoves.Clear();
 
-            List<PosibleMove> posibleFields = new List<PosibleMove>();
+            List<PossibleMove> possibleMoves = new List<PossibleMove>();
 
             foreach (Pawn pawn in gameModel.CurrentPlayer.GetPawns())
             {
                 FieldController fieldController = new FieldController();
                 List<Field> fields = new List<Field>();
-                posibleFields.AddRange(fieldController.CheckMoveOptions(pawn.Field, gameModel.Dice, fields, pawn));
+                possibleMoves.AddRange(fieldController.CheckMoveOptions(pawn.Field, gameModel.Dice, fields, pawn));
                 //posibleFields.AddRange(fieldController.CheckMoveOptions(pawn.Field, 3, fields, pawn));
             }
 
-            gameModel.PosibleMoves = posibleFields;
+            gameModel.PossibleMoves = possibleMoves;
         }
 
         private void GiveVisitableFieldsNumbers()
         {
             int option = 1;
-            foreach (PosibleMove move in gameModel.PosibleMoves)
+            foreach (PossibleMove move in gameModel.PossibleMoves)
             {
                 if (move.Field.VisitableOption == 0)
                 {
@@ -117,9 +117,9 @@ namespace Barricade.Controller
 
         private void ChoseMove()
         {
-            if (gameModel.PosibleMoves.Count == 0)
+            if (gameModel.PossibleMoves.Count == 0)
             {
-                gameView.NoPosibleMove();
+                gameView.NoPossibleMove();
                 return;
             }
 
@@ -127,11 +127,11 @@ namespace Barricade.Controller
             int chosenMove = 0;
             while (true)
             {
-                string chosenOne = gameView.ChosePosibleMove(numberOfTries, gameModel.PosibleMoves.Count);
+                string chosenOne = gameView.ChosePossibleMove(numberOfTries, gameModel.PossibleMoves.Count);
                 if (!chosenOne.Equals(""))
                 {
                     chosenMove = Int32.Parse(chosenOne);
-                    if (chosenMove > 0 && chosenMove < gameModel.PosibleMoves.Count + 1)
+                    if (chosenMove > 0 && chosenMove < gameModel.PossibleMoves.Count + 1)
                         break;
                 }
 
@@ -140,17 +140,17 @@ namespace Barricade.Controller
 
             //relocate to Field
             chosenMove--;
-            RelocatePawn(gameModel.PosibleMoves[chosenMove]);
+            RelocatePawn(gameModel.PossibleMoves[chosenMove]);
         }
 
-        private void RelocatePawn(PosibleMove move)
+        private void RelocatePawn(PossibleMove move)
         {
             move.Field.Enter(move.Pawn);
         }
 
         private void ResetVisitableFieldsNumbers()
         {
-            foreach (PosibleMove move in gameModel.PosibleMoves) move.Field.VisitableOption = 0;
+            foreach (PossibleMove move in gameModel.PossibleMoves) move.Field.VisitableOption = 0;
         }
 
         private bool PlayerWon()

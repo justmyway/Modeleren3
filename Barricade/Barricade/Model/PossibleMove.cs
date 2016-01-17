@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace Barricade.Model
 {
-    public class PosibleMove
+    public class PossibleMove
     {
         public Field Field { set; get; }
         public Pawn Pawn { set; get; }
 
-        public PosibleMove(Field newField, Pawn newPawn)
+        public PossibleMove(Field newField, Pawn newPawn)
         {
             Field = newField;
             Pawn = newPawn;

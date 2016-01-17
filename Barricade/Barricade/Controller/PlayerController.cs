@@ -71,7 +71,7 @@ namespace Barricade.Controller
         public void RelocateBarricade(Barricade barricade)
         {
             //start @player startField
-            List<Field> posibleFields = new List<Field>();
+            List<Field> possibleFields = new List<Field>();
             List<Field> toVisitFields = new List<Field>();
             List<Field> visitedFields = new List<Field>();
 
@@ -84,8 +84,8 @@ namespace Barricade.Controller
                     if (!visitedFields.Contains(nieghtborghfield)) {
 
                         //check on when able to visit
-                        if (nieghtborghfield.MayEnter(barricade) && !posibleFields.Contains(nieghtborghfield))
-                            posibleFields.Add(nieghtborghfield);
+                        if (nieghtborghfield.MayEnter(barricade) && !possibleFields.Contains(nieghtborghfield))
+                            possibleFields.Add(nieghtborghfield);
 
                         toVisitFields.Add(nieghtborghfield);
                     }
@@ -95,7 +95,7 @@ namespace Barricade.Controller
 
             //show options
             int option = 1;
-            foreach (Field move in posibleFields)
+            foreach (Field move in possibleFields)
             {
                 move.VisitableOption = option;
                 option++;
@@ -105,17 +105,17 @@ namespace Barricade.Controller
 
             int numberOfTries = 0;
             int chosenMove = 0;
-            while (chosenMove > 0 && chosenMove < posibleFields.Count + 1)
+            while (chosenMove > 0 && chosenMove < possibleFields.Count + 1)
             {
                 string chosenOne = playerView.ChosePosibleMove(numberOfTries);
                 chosenMove = Int32.Parse(chosenOne);
             }
 
             //reset options
-            foreach (Field move in posibleFields) move.VisitableOption = 0;
+            foreach (Field move in possibleFields) move.VisitableOption = 0;
 
             //relocate to Field
-            posibleFields[chosenMove--].Enter(barricade);
+            possibleFields[chosenMove--].Enter(barricade);
         }
 
         public void FinishPawn(Pawn finishedPawn)

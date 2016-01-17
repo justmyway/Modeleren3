@@ -12,10 +12,10 @@ namespace Barricade.Controller
     {
         private Field field;
 
-        public List<PosibleMove> CheckMoveOptions(Field newField, int movesLeft, List<Field> previousFields, Pawn visitingPawn)
+        public List<PossibleMove> CheckMoveOptions(Field newField, int movesLeft, List<Field> previousFields, Pawn visitingPawn)
         {
             field = newField;
-            List<PosibleMove> fields = new List<PosibleMove>();
+            List<PossibleMove> fields = new List<PossibleMove>();
             previousFields.Clear();
             previousFields.Add(field);
 
@@ -24,12 +24,12 @@ namespace Barricade.Controller
             {
                 if (field.MayEnter(visitingPawn))
                 {
-                    fields.Add(new PosibleMove(field, visitingPawn));
+                    fields.Add(new PossibleMove(field, visitingPawn));
                 }
                 return fields;
             }
             movesLeft--;
-            //Nieghbour fields
+            //Neighbour fields
             foreach (Field visitingfield in field.CorrespondingFields)
             {
                 if (!visitingfield.MayPass())

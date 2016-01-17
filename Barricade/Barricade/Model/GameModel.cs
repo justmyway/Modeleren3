@@ -12,13 +12,13 @@ namespace Barricade.Model
         public List<PlayerController> Players { get; }
         public PlayerController CurrentPlayer { get; set; }
         public int Dice { get; set; }
-        public List<PosibleMove> PosibleMoves { get; set; }
+        public List<PossibleMove> PossibleMoves { get; set; }
 
         public GameModel(List<PlayerController> gamePlayers)
         {
             Players = new List<PlayerController>();
             Players = gamePlayers;
-            PosibleMoves = new List<PosibleMove>();
+            PossibleMoves = new List<PossibleMove>();
         }
     }
 }
