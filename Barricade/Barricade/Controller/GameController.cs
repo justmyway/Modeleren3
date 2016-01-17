@@ -145,7 +145,6 @@ namespace Barricade.Controller
 
         private void RelocatePawn(PosibleMove move)
         {
-            move.Pawn.Field.RemovePiece(move.Pawn);
             move.Field.Enter(move.Pawn);
         }
 

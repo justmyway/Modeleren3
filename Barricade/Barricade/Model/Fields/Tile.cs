@@ -58,11 +58,16 @@ namespace Barricade.Model.Fields
 
         public override void Enter(Piece visiting_piece)
         {
+            //remove from old location
+            visiting_piece.Field?.RemovePiece(visiting_piece);
+
             if (Piece == null)
             {
                 Piece = visiting_piece;
+                Piece.Field = this;
                 return;
             }
+
             if (visiting_piece.Color != Piece.Color)
                 Console.WriteLine("/* This move is not posible */");
 
@@ -88,7 +93,6 @@ namespace Barricade.Model.Fields
                     pawn.Owner.RelocateToStart(pawn);
                 }
             }
-            Piece.Field.RemovePiece(Piece);
             Piece.Field = this;
         }
 

@@ -16,6 +16,7 @@ namespace Barricade.Controller
         {
             field = newField;
             List<PosibleMove> fields = new List<PosibleMove>();
+            previousFields.Clear();
             previousFields.Add(field);
 
             //End field
@@ -36,7 +37,7 @@ namespace Barricade.Controller
                     previousFields.Add(visitingfield);
                     continue;
                 }
-                else if (!previousFields.Contains(visitingfield))
+                if (!previousFields.Contains(visitingfield))
                 {
                     FieldController visitingController = new FieldController();
                     fields.AddRange(visitingController.CheckMoveOptions(visitingfield, movesLeft, previousFields, visitingPawn));
