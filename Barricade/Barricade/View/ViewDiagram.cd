@@ -1,21 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="Barricade.View.FieldView">
-    <Position X="6" Y="2.75" Width="1.5" />
+    <Position X="6" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
       <FileName>View\FieldView.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Barricade.View.FinishFieldView">
-    <Position X="3.75" Y="7.5" Width="1.5" />
+    <Position X="3.75" Y="8" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>View\FinishFieldView.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Barricade.View.ForestFieldView">
-    <Position X="8" Y="4.75" Width="1.5" />
+    <Position X="8" Y="5.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEgAA=</HashCode>
       <FileName>View\ForestFieldView.cs</FileName>
@@ -24,9 +24,12 @@
   <Class Name="Barricade.View.GameView">
     <Position X="10.5" Y="2.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AACBAAgIAAAAAQAAAAAAgAAAAAAAAAAACAAAAIIEAAA=</HashCode>
+      <HashCode>AACAAAgIAAAAACAAAAAAgAAAAAAAAAAACAAAAIoEAAA=</HashCode>
       <FileName>View\GameView.cs</FileName>
     </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="fields" />
+    </ShowAsCollectionAssociation>
   </Class>
   <Class Name="Barricade.View.PlayerView">
     <Position X="10.25" Y="1.25" Width="1.5" />
@@ -36,14 +39,14 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Barricade.View.RestFieldView">
-    <Position X="6" Y="7.5" Width="1.5" />
+    <Position X="6" Y="8" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>View\RestFieldView.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Barricade.View.TileFieldView">
-    <Position X="4.75" Y="4.75" Width="1.5" />
+    <Position X="4.75" Y="5.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAEAQA=</HashCode>
       <FileName>View\TileFieldView.cs</FileName>
@@ -51,6 +54,10 @@
   </Class>
   <Class Name="Barricade.View.ViewColor">
     <Position X="8" Y="1.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
     <TypeIdentifier>
       <HashCode>EAAgAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>View\ViewColor.cs</FileName>

@@ -1,41 +1,41 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Comment CommentText="Bigger tile">
-    <Position X="4.406" Y="1.385" Height="0.375" Width="0.898" />
+    <Position X="2.625" Y="0.906" Height="0.375" Width="0.898" />
   </Comment>
   <Comment CommentText="Small tile">
-    <Position X="2.01" Y="3.687" Height="0.417" Width="0.856" />
+    <Position X="10.77" Y="0.812" Height="0.417" Width="0.856" />
   </Comment>
   <Class Name="Barricade.Field">
-    <Position X="0.5" Y="0.5" Width="1.5" />
+    <Position X="6.25" Y="0.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAgAAAAAAAgAAAAAEQAAAAAEAAAFAAgAAAAAAAAAAAA=</HashCode>
       <FileName>Model\Fields\Field.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Barricade.Model.Fields.FinishTile">
-    <Position X="3" Y="6" Width="1.5" />
+    <Position X="8.75" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAFAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Model\Fields\FinishTile.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Barricade.Model.Fields.Forest">
-    <Position X="2.75" Y="0.5" Width="1.5" />
+    <Position X="3.75" Y="0.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAEAAAAAAAAAAFAAggAAAAAAAAAAA=</HashCode>
       <FileName>Model\Fields\Forest.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Barricade.Model.Fields.RestTile">
-    <Position X="3" Y="4" Width="1.5" />
+    <Position X="11" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAFAAgAAAAAAAAAAAA=</HashCode>
       <FileName>Model\Fields\RestTile.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Barricade.Model.Fields.Tile">
-    <Position X="0.5" Y="4.25" Width="2" />
+    <Position X="8.5" Y="0.75" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAEAAAAAAAAAAFAAgAAAAAIAAAAAA=</HashCode>
       <FileName>Model\Fields\Tile.cs</FileName>
