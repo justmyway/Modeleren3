@@ -90,7 +90,7 @@ namespace Barricade.Controller
             {
                 FieldController controller = new FieldController();
                 List<Field> fields = new List<Field>();
-                posibleFields.AddRange(controller.CheckMoveOptions(pawn.Field, gameModel.Dice, fields, pawn));
+                posibleFields.AddRange(controller.CheckMoveOptions(pawn.Field,gameModel.Dice, fields, pawn));
             }
 
             gameModel.PosibleMoves = posibleFields;
@@ -98,12 +98,14 @@ namespace Barricade.Controller
 
         private void GiveVisitableFieldsNumbers()
         {
-            gameModel.PosibleMoves.Reverse();
             int option = 1;
             foreach (PosibleMove move in gameModel.PosibleMoves)
             {
-                move.Field.VisitableOption = option;
-                option++;
+                if (move.Field.VisitableOption == 0)
+                {
+                    move.Field.VisitableOption = option;
+                    option++;
+                }
             }
         }
 
