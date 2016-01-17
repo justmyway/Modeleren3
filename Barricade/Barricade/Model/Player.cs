@@ -26,6 +26,10 @@ namespace Barricade
         {
             _forest = forest;
             _startFields = startFields;
+            for (int i = 0; i < Pawns.Count; i++)
+            {
+                startFields[i].Enter(Pawns[i]);
+            }
         }
 
         public void RelocateToForest(Pawn pawn)

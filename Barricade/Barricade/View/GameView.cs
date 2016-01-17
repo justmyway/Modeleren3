@@ -59,7 +59,7 @@ namespace Barricade.View
                 {
                     if (fields[y,x] != null)
                     {
-                        Console.Write(fields[y, x].Print());
+                        fields[y, x].Print();
                     }
                     else
                     {
