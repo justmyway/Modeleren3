@@ -37,16 +37,12 @@ namespace Barricade.View
                     Console.Write("P");
                 }
                 ResetConsoleColor();
-                if ( Tile.VisitableOption != 0)
-                {
-                    Console.Write(Tile.VisitableOption.ToString() + ",");
-                }                
+                                
                 return;
             }
             if (Tile.VisitableOption != 0)
             {
-                Console.Write(Tile.VisitableOption.ToString());
-                return;
+                Console.Write(Tile.VisitableOption);
             }
             Console.Write(" ");
         }

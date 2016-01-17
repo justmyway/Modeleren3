@@ -90,7 +90,7 @@ namespace Barricade.Controller
             {
                 FieldController controller = new FieldController();
                 List<Field> fields = new List<Field>();
-                posibleFields.AddRange(controller.CheckMoveOptions(pawn.Field, gameModel.Dice, fields, pawn));
+                posibleFields.AddRange(controller.CheckMoveOptions(pawn.Field,gameModel.Dice, fields, pawn));
             }
 
             gameModel.PosibleMoves = posibleFields;
