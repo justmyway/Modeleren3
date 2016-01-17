@@ -12,10 +12,11 @@ namespace Barricade.Controller
     {
         private Field field;
 
-        public List<PosibleMove> CheckMoveOptions(Field newField, int movesLeft, Field previousField, Pawn visitingPawn)
+        public List<PosibleMove> CheckMoveOptions(Field newField, int movesLeft, List<Field> previousFields, Pawn visitingPawn)
         {
             field = newField;
             List<PosibleMove> fields = new List<PosibleMove>();
+            previousFields.Add(field);
             int movesleft = movesLeft--;
 
             //Barricade
@@ -37,14 +38,10 @@ namespace Barricade.Controller
             foreach (Field visitingfield in field.CorrespondingFields)
             {
                 Console.WriteLine(visitingfield);
-                if (previousField != visitingfield)
+                if (!previousFields.Contains(visitingfield))
                 {
                     FieldController visitingController = new FieldController();
-                    fields.AddRange(visitingController.CheckMoveOptions(visitingfield, movesLeft--, field, visitingPawn));
-                }
-                else
-                {
-                    Console.WriteLine("don't visit this field");
+                    fields.AddRange(visitingController.CheckMoveOptions(visitingfield, movesLeft--, previousFields, visitingPawn));
                 }
             }
 
