@@ -12,6 +12,6 @@ namespace Barricade.View
         {
         }
 
-        public abstract void Print(bool showVisitable);
+        public abstract void Print();
     }
 }

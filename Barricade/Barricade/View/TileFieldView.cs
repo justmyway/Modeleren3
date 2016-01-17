@@ -22,7 +22,7 @@ namespace Barricade.View
         {
         }
 
-        public override void Print(bool showVisitable)
+        public override void Print()
         {
             Console.Write(value);
             if (Tile.Piece != null)
@@ -37,7 +37,7 @@ namespace Barricade.View
                     Console.Write("P");
                 }
                 ResetConsoleColor();
-                if ( showVisitable)
+                if ( Tile.VisitableOption != 0)
                 {
                     Console.Write(Tile.VisitableOption);
                 }                

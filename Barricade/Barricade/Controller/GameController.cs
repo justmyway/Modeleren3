@@ -41,7 +41,7 @@ namespace Barricade
 
             //Create the field
             CreateField();
-            gameView.Print(false);
+            gameView.Print();
         }
 
         public void Play()
@@ -58,7 +58,7 @@ namespace Barricade
                 GiveVisitableFieldsNumbers();
 
                 //show map
-                gameView.Print(false);
+                gameView.Print();
 
                 //player make chose en relocate pawn
                 ChoseMove();
