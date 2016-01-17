@@ -478,15 +478,15 @@ namespace Barricade.Controller
             tile93.CorrespondingFields.Add(tile83);
             tile94.CorrespondingFields.Add(tile83);
 
-            tile106.CorrespondingFields.Add(tile76);
-            tile107.CorrespondingFields.Add(tile76);
-            tile96.CorrespondingFields.Add(tile76);
-            tile97.CorrespondingFields.Add(tile76);
+            tile106.CorrespondingFields.Add(tile86);
+            tile107.CorrespondingFields.Add(tile86);
+            tile96.CorrespondingFields.Add(tile86);
+            tile97.CorrespondingFields.Add(tile86);
 
-            tile109.CorrespondingFields.Add(tile79);
-            tile1010.CorrespondingFields.Add(tile79);
-            tile99.CorrespondingFields.Add(tile79);
-            tile910.CorrespondingFields.Add(tile79);
+            tile109.CorrespondingFields.Add(tile89);
+            tile1010.CorrespondingFields.Add(tile89);
+            tile99.CorrespondingFields.Add(tile89);
+            tile910.CorrespondingFields.Add(tile89);
 
             gameModel.Players[0].AddStartAndForest(new List<Field>() { tile100, tile101, tile90, tile91 }, forest);
             gameModel.Players[1].AddStartAndForest(new List<Field>() { tile103, tile104, tile93, tile94 }, forest);
