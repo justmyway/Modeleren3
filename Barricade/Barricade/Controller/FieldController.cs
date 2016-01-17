@@ -17,7 +17,7 @@ namespace Barricade.Controller
             field = newField;
             List<PosibleMove> fields = new List<PosibleMove>();
             previousFields.Add(field);
-            int movesleft = movesLeft--;
+            
 
             //Barricade
             if (!field.MayPass()) {
@@ -33,7 +33,7 @@ namespace Barricade.Controller
                 }
                 return fields;
             }
-
+            movesLeft--;
             //Nieghbour fields
             foreach (Field visitingfield in field.CorrespondingFields)
             {
@@ -41,7 +41,7 @@ namespace Barricade.Controller
                 if (!previousFields.Contains(visitingfield))
                 {
                     FieldController visitingController = new FieldController();
-                    fields.AddRange(visitingController.CheckMoveOptions(visitingfield, movesLeft--, previousFields, visitingPawn));
+                    fields.AddRange(visitingController.CheckMoveOptions(visitingfield, movesLeft, previousFields, visitingPawn));
                 }
             }
 
