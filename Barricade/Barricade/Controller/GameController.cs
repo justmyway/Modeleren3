@@ -128,9 +128,12 @@ namespace Barricade.Controller
             while (true)
             {
                 string chosenOne = gameView.ChosePosibleMove(numberOfTries, gameModel.PosibleMoves.Count);
-                chosenMove = Int32.Parse(chosenOne);
-                if (chosenMove > 0 && chosenMove < gameModel.PosibleMoves.Count + 1)
-                    break;
+                if (!chosenOne.Equals(""))
+                {
+                    chosenMove = Int32.Parse(chosenOne);
+                    if (chosenMove > 0 && chosenMove < gameModel.PosibleMoves.Count + 1)
+                        break;
+                }
 
                 numberOfTries++;
             }

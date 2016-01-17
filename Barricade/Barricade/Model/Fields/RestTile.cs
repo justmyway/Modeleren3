@@ -26,11 +26,16 @@ namespace Barricade.Model.Fields
             if(Piece != null)
                 Console.WriteLine("/* This move is not posible */");
 
+            
+            piece.Field.RemovePiece(Piece);
+            piece.Field = this;
             Piece = piece;
-            Piece.Field.RemovePiece(Piece);
-            Piece.Field = this;
+            
         }
 
-        
+        public override void RemovePiece(Piece piece)
+        {
+            Piece = null;
+        }
     }
 }
