@@ -1,0 +1,37 @@
+/* Door Arald toegevoegd */
+
+
+#primaryButton, input.submit[type="submit"], .rumble .mainButton > a, .rumble_top .mainButton > a, .button-1, .button-1-img {
+	background: linear-gradient(to bottom,  #c6002a,#660032);
+	background: -ms-linear-gradient(to bottom,  #c6002a,#660032);
+	background-image: -moz-linear-gradient(100% 100% 90deg, #c6002a, #660032);
+	background: -webkit-gradient(linear,0 0,0 90%,from(#C6002A),to(#660032));
+   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#c6002a, endColorstr=#660032";
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#c6002a, endColorstr=#660032);
+    color: #FFF;
+    font-size: 105%;
+    font-weight: bold;
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.8);
+    border: 1px solid #C6002A;
+    border-radius: 3px;
+}
+
+/* voor de hover effecten */
+input.submit[type="submit"]:hover, input.submit[type="submit"]:focus, .rumble .mainButton > a:hover, .rumble .mainButton > a:focus, .rumble_top .mainButton > a:hover, .rumble_top .mainButton > a:focus, .button-1:hover, .button-1:focus, .button-1-img:hover, .button-1-img:focus {
+	background: linear-gradient(to bottom, #660032, #c6002a);
+	background: -ms-linear-gradient(to bottom,  #660032,#c6002a);
+    background: #C6002A -moz-linear-gradient(100% 100% 90deg, #660032, #C6002A) repeat scroll 0% 0%;
+	background: -webkit-gradient(linear,0 0,0 90%,from(#660032),to(#C6002A));
+   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#c6002a, endColorstr=#660032";
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#c6002a, endColorstr=#660032);
+}
+
+/* Support jukebox link */
+#hotSpots {
+	width: 44px;
+	padding-top: 0px;
+	background: transparent;
+	margin: 0px;
+	padding-left: 7px;
+	padding-right: 3px;
+}
