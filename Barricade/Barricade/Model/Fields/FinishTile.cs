@@ -16,5 +16,10 @@ namespace Barricade.Model.Fields
         {
             Piece = entering_piece;
         }
+
+        public override bool MayEnter(Piece piece)
+        {
+            return (piece.Color != Color.WHITE);
+        }
     }
 }

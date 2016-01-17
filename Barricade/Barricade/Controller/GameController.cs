@@ -28,7 +28,7 @@ namespace Barricade
                 if(color == Color.WHITE)
                     continue;
                 
-                players.Add(new Player(color));
+                players.Add(new Player(this, color));
             }
 
             gameModel = new GameModel(players);
@@ -58,7 +58,7 @@ namespace Barricade
                 GiveVisitableFieldsNumbers();
 
                 //show map
-                gameView.Print();
+                ShowMap();
 
                 //player make chose en relocate pawn
                 ChoseMove();
@@ -101,6 +101,11 @@ namespace Barricade
                 move.Field.VisitableOption = option;
                 option++;
             }
+        }
+
+        public void ShowMap()
+        {
+            gameView.Print();
         }
 
         private void ChoseMove()
@@ -257,27 +262,27 @@ namespace Barricade
             Tile tile710 = new RestTile(false);
             fieldViews[7, 10] = new RestFieldView(tile710);
 
-            Tile tile80 = new Tile(false);
+            Tile tile80 = new Tile(false, false, true);
             fieldViews[8, 0] = new TileFieldView(tile80);
-            Tile tile81 = new Tile(false);
+            Tile tile81 = new Tile(false, false, true);
             fieldViews[8, 1] = new TileFieldView(tile81);
-            Tile tile82 = new Tile(false);
+            Tile tile82 = new Tile(false, false, true);
             fieldViews[8, 2] = new TileFieldView(tile82);
-            Tile tile83 = new Tile(false);
+            Tile tile83 = new Tile(false, false, true);
             fieldViews[8, 3] = new TileFieldView(tile83);
-            Tile tile84 = new Tile(false);
+            Tile tile84 = new Tile(false, false, true);
             fieldViews[8, 4] = new TileFieldView(tile84);
-            Tile tile85 = new Tile(false);
+            Tile tile85 = new Tile(false, false, true);
             fieldViews[8, 5] = new TileFieldView(tile85);
-            Tile tile86 = new Tile(false);
+            Tile tile86 = new Tile(false, false, true);
             fieldViews[8, 6] = new TileFieldView(tile86);
-            Tile tile87 = new Tile(false);
+            Tile tile87 = new Tile(false, false, true);
             fieldViews[8, 7] = new TileFieldView(tile87);
-            Tile tile88 = new Tile(false);
+            Tile tile88 = new Tile(false, false, true);
             fieldViews[8, 8] = new TileFieldView(tile88);
-            Tile tile89 = new Tile(false);
+            Tile tile89 = new Tile(false, false, true);
             fieldViews[8, 9] = new TileFieldView(tile89);
-            Tile tile810 = new Tile(false);
+            Tile tile810 = new Tile(false, false, true);
             fieldViews[8, 10] = new TileFieldView(tile810);
 
             Tile tile90 = new Tile(false);

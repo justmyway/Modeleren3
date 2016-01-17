@@ -15,7 +15,18 @@ namespace Barricade.Model.Fields
 
         public override bool MayEnter(Piece visiting_piece)
         {
-            return visiting_piece.Color != Piece.Color;
+            if (visiting_piece.Color == Color.WHITE)
+            {
+                if (FirstRow || Piece != null)
+                    return false;
+
+                return true;
+            }
+
+            if(visiting_piece != null)
+                return visiting_piece.Color != Piece.Color;
+
+            return true;
         }
 
         public override bool MayPass()
@@ -43,8 +54,9 @@ namespace Barricade.Model.Fields
             //relocate Piece
             if (oldPiece.GetType() == typeof (Barricade))
             {
-                //relocate barricade
-                //todo
+                Pawn pawn = (Pawn)visiting_piece;
+                Barricade barricade = (Barricade)oldPiece;
+                pawn.Owner.RelocateBarricade(barricade);
             }
             else
             {
@@ -70,10 +82,17 @@ namespace Barricade.Model.Fields
             Village = village;
         }
 
-        public Tile( bool village, bool hasBarricade)
+        public Tile(bool village, bool hasBarricade)
         {
             Village = village;
             Piece = new Barricade();
+        }
+
+        public Tile(bool village, bool hasBarricade, bool firstRow)
+        {
+            Village = village;
+            Piece = new Barricade();
+            FirstRow = firstRow;
         }
     }
 }

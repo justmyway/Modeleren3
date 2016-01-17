@@ -16,6 +16,9 @@ namespace Barricade.Model.Fields
         }
         
         public override bool MayEnter(Piece visiting_piece) {
+            if (visiting_piece.Color == Color.WHITE)
+                return false;
+
             return Piece == null;
         }
 

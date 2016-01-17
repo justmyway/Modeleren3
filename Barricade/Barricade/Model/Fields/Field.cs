@@ -12,12 +12,14 @@ namespace Barricade
         {
             VisitableOption = 0;
             Village = false;
+            FirstRow = false;
             CorrespondingFields = new List<Field>();
         }
 
         public List<Field> CorrespondingFields { get; set; }
         public int VisitableOption { get; set; }
         public bool Village { get; set; }
+        public bool FirstRow { get; set; }
         public abstract bool MayEnter(Piece piece);
         public abstract void Enter(Piece piece);
         public abstract bool MayPass();

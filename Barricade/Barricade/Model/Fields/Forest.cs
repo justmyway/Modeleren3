@@ -27,7 +27,8 @@ namespace Barricade.Model.Fields
 
         public override bool MayEnter(Piece piece)
         {
-            throw new NotImplementedException();
+            Console.WriteLine();
+            return false;
         }
 
         public override bool MayPass()
