@@ -14,9 +14,9 @@ namespace Barricade.View
             Field = field;
         }
 
-        public override string Print()
+        public override void Print()
         {
-            return "F ";
+            Console.Write("F ");
         }
     }
 }

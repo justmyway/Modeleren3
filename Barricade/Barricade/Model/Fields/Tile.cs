@@ -29,6 +29,11 @@ namespace Barricade.Model.Fields
 
         public override void Enter(Piece visiting_piece)
         {
+            if (Piece == null)
+            {
+                Piece = visiting_piece;
+                return;
+            }
             if (visiting_piece.Color != Piece.Color)
                 Console.WriteLine("/* This move is not posible */");
 

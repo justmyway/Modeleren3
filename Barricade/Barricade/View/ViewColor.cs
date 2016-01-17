@@ -18,6 +18,7 @@ namespace Barricade.View
             ConsoleColors.Add(Color.GREEN, ConsoleColor.Green);
             ConsoleColors.Add(Color.YELLOW, ConsoleColor.Yellow);
             ConsoleColors.Add(Color.BLUE, ConsoleColor.Blue);
+            ConsoleColors.Add(Color.WHITE, ConsoleColor.White);
         }
 
         public void SetConsoleColor(Color color)

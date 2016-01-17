@@ -13,7 +13,7 @@ namespace Barricade
         {
             GameController game = new GameController();
 
-            game.Play();
+            //game.Play();
 
             Console.WriteLine("The game has finished.");
             Console.Read();

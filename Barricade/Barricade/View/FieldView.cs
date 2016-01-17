@@ -12,6 +12,6 @@ namespace Barricade.View
         {
         }
 
-        public abstract string Print();
+        public abstract void Print();
     }
 }

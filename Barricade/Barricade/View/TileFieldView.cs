@@ -22,21 +22,25 @@ namespace Barricade.View
         {
         }
 
-        public override string Print()
+        public override void Print()
         {
+            Console.Write(value);
             if (Tile.Piece != null)
             {
+                SetConsoleColor(Tile.Piece.Color);
                 if (Tile.Piece.GetType() == typeof(Barricade))
                 {
-                    return value + "X";
+                    Console.Write("X");
                 }
                 else
                 {
-
-                    return value + "P";
+                    
+                    Console.Write("P");
                 }
+                ResetConsoleColor();
+                return;
             }
-            return value + " ";
+            Console.Write(" ");
         }
     }
 }
