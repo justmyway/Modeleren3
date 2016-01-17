@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Barricade", "Barricade\Barricade.csproj", "{0AE6842B-58C4-45B5-BF66-495ED89B45A8}"
 EndProject
-Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "Architectuur", "Architectuur\Architectuur.modelproj", "{96C6D7AB-5E95-4935-83A3-B38FF229FC4D}"
+Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "Model", "ModelingProject1\Model.modelproj", "{2C34C236-AF10-4D08-BB5B-2966726D79A0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{0AE6842B-58C4-45B5-BF66-495ED89B45A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0AE6842B-58C4-45B5-BF66-495ED89B45A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0AE6842B-58C4-45B5-BF66-495ED89B45A8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{96C6D7AB-5E95-4935-83A3-B38FF229FC4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{96C6D7AB-5E95-4935-83A3-B38FF229FC4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{96C6D7AB-5E95-4935-83A3-B38FF229FC4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{96C6D7AB-5E95-4935-83A3-B38FF229FC4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C34C236-AF10-4D08-BB5B-2966726D79A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C34C236-AF10-4D08-BB5B-2966726D79A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C34C236-AF10-4D08-BB5B-2966726D79A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C34C236-AF10-4D08-BB5B-2966726D79A0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

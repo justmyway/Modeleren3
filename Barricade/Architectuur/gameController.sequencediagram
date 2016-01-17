@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" dslVersion="1.0.0.0" Id="4e7fe9ff-2709-4a0e-879d-e96a7dda737c" name="gameController" linkedPackageId="4095706a-0961-496d-925f-efa8fe870011" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="cf4cf162-b0a1-46dc-a889-fdf8ba1db874">
+      <profileInstance Id="21b2d62f-ca93-4b6d-9d95-e8890f51a29e" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="492b70e6-7945-4b48-bdf9-0994a284580a">
+      <profileInstance Id="54dc14f8-de5d-4203-9782-0d473366cc1e" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <interaction Id="186e6f96-ffd8-4063-afb5-9afcc9444758" name="gameController" collapseFragmentsFlag="false" isActiveClass="false" isAbstract="false" isLeaf="false" isReentrant="false">
+        <elementDefinition Id="54f099a6-4dfe-4e02-9b0b-c4951b0ddd1b" />
+      </interaction>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="4095706a-0961-496d-925f-efa8fe870011" name="Architectuur">
+    <elementDefinition Id="ab4b76e8-123c-4da5-8df7-16ca3feea995" />
+  </package>
+</SequenceDesignerModel>
