@@ -29,5 +29,10 @@ namespace Barricade.Model.Fields
         {
             throw new NotImplementedException();
         }
+
+        public override bool MayPass()
+        {
+            return true;
+        }
     }
 }
