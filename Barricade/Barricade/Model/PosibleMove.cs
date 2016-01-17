@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Barricade.Model.Pieces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

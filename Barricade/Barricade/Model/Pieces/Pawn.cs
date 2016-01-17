@@ -1,19 +1,19 @@
-﻿using System;
+﻿using Barricade.Controller;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Barricade.Model.Pieces;
 
-namespace Barricade
+namespace Barricade.Model.Pieces
 {
     public class Pawn : Piece
     {
-        public Pawn(Color color, Player owner)
+        public Pawn(Color color, PlayerController owner)
         {
             Color = color;
             Owner = owner;
         }
 
-        public Player Owner { get; }
+        public PlayerController Owner { get; }
     }
 }

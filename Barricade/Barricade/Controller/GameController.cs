@@ -7,8 +7,9 @@ using Barricade.Controller;
 using Barricade.Model;
 using Barricade.Model.Fields;
 using Barricade.View;
+using Barricade.Model.Pieces;
 
-namespace Barricade
+namespace Barricade.Controller
 {
     public class GameController
     {
@@ -21,14 +22,14 @@ namespace Barricade
         public GameController()
         {
             //create Players 
-            List<Player> players = new List<Player>();
+            List<PlayerController> players = new List<PlayerController>();
             
             foreach (Color color in Enum.GetValues(typeof(Color)))
             {
                 if(color == Color.WHITE)
                     continue;
                 
-                players.Add(new Player(this, color));
+                players.Add(new PlayerController(this, color));
             }
 
             gameModel = new GameModel(players);
@@ -82,9 +83,11 @@ namespace Barricade
 
         private void CalculateMoves()
         {
+            gameModel.PosibleMoves.Clear();
+
             List<PosibleMove> posibleFields = new List<PosibleMove>();
 
-            foreach (Pawn pawn in gameModel.CurrentPlayer.Pawns)
+            foreach (Pawn pawn in gameModel.CurrentPlayer.GetPawns())
             {
                 FieldController controller = new FieldController();
                 posibleFields.AddRange(controller.CheckMoveOptions(pawn.Field, gameModel.Dice, null, pawn));
@@ -119,7 +122,8 @@ namespace Barricade
             }
 
             //relocate to Field
-           RelocatePawn(gameModel.PosibleMoves[chosenMove--]);
+            chosenMove--;
+            RelocatePawn(gameModel.PosibleMoves[chosenMove]);
         }
 
         private void RelocatePawn(PosibleMove move)
@@ -136,7 +140,7 @@ namespace Barricade
 
         private bool PlayerWon()
         {
-            return gameModel.CurrentPlayer.Pawns.Count == 0;
+            return gameModel.CurrentPlayer.GetPawns().Count == 0;
         }
 
         private void NextPlayer()

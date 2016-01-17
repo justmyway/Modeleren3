@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Barricade.Model;
+using Barricade.Model.Pieces;
 
 namespace Barricade.Controller
 {
@@ -13,10 +14,9 @@ namespace Barricade.Controller
 
         public List<PosibleMove> CheckMoveOptions(Field newField, int movesLeft, Field previousField, Pawn visitingPawn)
         {
-            Console.WriteLine("Checkfield");
-
             field = newField;
             List<PosibleMove> fields = new List<PosibleMove>();
+            int movesleft = movesLeft--;
 
             //Barricade
             if (!field.MayPass()) {

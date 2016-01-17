@@ -13,6 +13,24 @@ namespace Barricade.Model.Fields
     {
         public Piece Piece { get; set; }
 
+        public Tile(bool village)
+        {
+            Village = village;
+        }
+
+        public Tile(bool village, bool hasBarricade)
+        {
+            Village = village;
+            Piece = new Barricade();
+        }
+
+        public Tile(bool village, bool hasBarricade, bool firstRow)
+        {
+            Village = village;
+            if (hasBarricade) Piece = new Barricade();
+            if (firstRow) FirstRow = firstRow;
+        }
+
         public override bool MayEnter(Piece visiting_piece)
         {
             if (visiting_piece.Color == Color.WHITE)
@@ -23,7 +41,7 @@ namespace Barricade.Model.Fields
                 return true;
             }
 
-            if(visiting_piece != null)
+            if(Piece != null)
                 return visiting_piece.Color != Piece.Color;
 
             return true;
@@ -75,24 +93,6 @@ namespace Barricade.Model.Fields
         public override void RemovePiece(Piece piece)
         {
             Piece = null;
-        }
-
-        public Tile(bool village)
-        {
-            Village = village;
-        }
-
-        public Tile(bool village, bool hasBarricade)
-        {
-            Village = village;
-            Piece = new Barricade();
-        }
-
-        public Tile(bool village, bool hasBarricade, bool firstRow)
-        {
-            Village = village;
-            Piece = new Barricade();
-            FirstRow = firstRow;
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Barricade.Controller;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,7 +14,7 @@ namespace Barricade
         {
             GameController game = new GameController();
 
-            //game.Play();
+            game.Play();
 
             Console.WriteLine("The game has finished.");
             Console.Read();

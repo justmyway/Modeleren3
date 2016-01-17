@@ -53,6 +53,7 @@
     <Compile Include="Controller\GameController.cs" />
     <Compile Include="Model\Pieces\Pawn.cs" />
     <Compile Include="Model\Pieces\Piece.cs" />
+    <Compile Include="Controller\PlayerController.cs" />
     <Compile Include="Model\Player.cs" />
     <Compile Include="Model\PosibleMove.cs" />
     <Compile Include="Program.cs" />
@@ -63,6 +64,7 @@
     <Compile Include="View\FinishFieldView.cs" />
     <Compile Include="View\ForestFieldView.cs" />
     <Compile Include="View\GameView.cs" />
+    <Compile Include="View\PlayerView.cs" />
     <Compile Include="View\RestFieldView.cs" />
     <Compile Include="View\TileFieldView.cs" />
     <Compile Include="View\ViewColor.cs" />
