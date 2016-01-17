@@ -117,5 +117,10 @@ namespace Barricade.Controller
             //relocate to Field
             posibleFields[chosenMove--].Enter(barricade);
         }
+
+        public void FinishPawn(Pawn finishedPawn)
+        {
+            PlayerModel.Pawns.Remove(finishedPawn);
+        }
     }
 }

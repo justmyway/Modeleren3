@@ -26,6 +26,11 @@ namespace Barricade.View
             Console.ForegroundColor = ConsoleColors[color];
         }
 
+        public void SetConsoleColor(ConsoleColor color)
+        {
+            Console.ForegroundColor = color;
+        }
+
         public void ResetConsoleColor()
         {
             Console.ResetColor();

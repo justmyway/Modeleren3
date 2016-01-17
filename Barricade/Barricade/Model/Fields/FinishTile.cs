@@ -14,7 +14,8 @@ namespace Barricade.Model.Fields
         }
         public override void Enter(Piece entering_piece)
         {
-            Piece = entering_piece;
+            Pawn pawn = (Pawn)entering_piece;
+            pawn.Owner.FinishPawn(pawn);
         }
 
         public override bool MayEnter(Piece piece)
