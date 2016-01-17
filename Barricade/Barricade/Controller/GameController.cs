@@ -90,7 +90,7 @@ namespace Barricade.Controller
             {
                 FieldController fieldController = new FieldController();
                 List<Field> fields = new List<Field>();
-                posibleFields.AddRange(fieldController.CheckMoveOptions(pawn.Field,gameModel.Dice, fields, pawn));
+                posibleFields.AddRange(fieldController.CheckMoveOptions(pawn.Field, gameModel.Dice, fields, pawn));
                 //posibleFields.AddRange(fieldController.CheckMoveOptions(pawn.Field, 3, fields, pawn));
             }
 
@@ -153,7 +153,7 @@ namespace Barricade.Controller
 
         private bool PlayerWon()
         {
-            return gameModel.CurrentPlayer.GetPawns().Count == 0;
+            return gameModel.CurrentPlayer.GetPawns().Count <= 3;
         }
 
         private void NextPlayer()
