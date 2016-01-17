@@ -20,6 +20,10 @@ namespace Barricade
             //pieces maken
             //todo
             Pawns = new List<Pawn>();
+            Pawns.Add(new Pawn(Color, this));
+            Pawns.Add(new Pawn(Color, this));
+            Pawns.Add(new Pawn(Color, this));
+            Pawns.Add(new Pawn(Color, this));
         }
 
         public void AddStartAndForest(List<Field> startFields, Field forest)

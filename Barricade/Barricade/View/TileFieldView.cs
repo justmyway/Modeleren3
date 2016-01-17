@@ -38,6 +38,7 @@ namespace Barricade.View
                     Console.Write("P");
                 }
                 ResetConsoleColor();
+                return;
             }
             Console.Write(" ");
         }
