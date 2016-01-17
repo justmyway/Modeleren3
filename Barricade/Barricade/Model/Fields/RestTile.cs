@@ -27,6 +27,7 @@ namespace Barricade.Model.Fields
                 Console.WriteLine("/* This move is not posible */");
 
             Piece = piece;
+            Piece.Field.RemovePiece(Piece);
             Piece.Field = this;
         }
 

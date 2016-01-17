@@ -88,10 +88,10 @@ namespace Barricade.Controller
 
             foreach (Pawn pawn in gameModel.CurrentPlayer.GetPawns())
             {
-                FieldController controller = new FieldController();
+                FieldController fieldController = new FieldController();
                 List<Field> fields = new List<Field>();
-                //posibleFields.AddRange(controller.CheckMoveOptions(pawn.Field,gameModel.Dice, fields, pawn));
-                posibleFields.AddRange(controller.CheckMoveOptions(pawn.Field, 2, fields, pawn));
+                posibleFields.AddRange(fieldController.CheckMoveOptions(pawn.Field,gameModel.Dice, fields, pawn));
+                //posibleFields.AddRange(fieldController.CheckMoveOptions(pawn.Field, 3, fields, pawn));
             }
 
             gameModel.PosibleMoves = posibleFields;
@@ -117,14 +117,22 @@ namespace Barricade.Controller
 
         private void ChoseMove()
         {
+            if (gameModel.PosibleMoves.Count == 0)
+            {
+                gameView.NoPosibleMove();
+                return;
+            }
+
             int numberOfTries = 0;
             int chosenMove = 0;
             while (true)
             {
-                string chosenOne = gameView.ChosePosibleMove(numberOfTries);
+                string chosenOne = gameView.ChosePosibleMove(numberOfTries, gameModel.PosibleMoves.Count);
                 chosenMove = Int32.Parse(chosenOne);
                 if (chosenMove > 0 && chosenMove < gameModel.PosibleMoves.Count + 1)
-                    break;                    
+                    break;
+
+                numberOfTries++;
             }
 
             //relocate to Field

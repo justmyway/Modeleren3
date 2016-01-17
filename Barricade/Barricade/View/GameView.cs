@@ -86,7 +86,7 @@ namespace Barricade.View
             Console.WriteLine(" has thrown " + gameModel.Dice + ".");
         }
 
-        public string ChosePosibleMove(int numberOfTries)
+        public string ChosePosibleMove(int numberOfTries, int posibilities = 0)
         {
             if (numberOfTries > 0)
             {
@@ -95,8 +95,15 @@ namespace Barricade.View
                 ResetConsoleColor();
             }
             Console.WriteLine("Inset a number of the field you would like to move to:");
+            if(posibilities != 0)
+                Console.WriteLine("  --> Posibilities: " + posibilities);
             Console.Out.Flush();
             return Console.ReadLine();
+        }
+
+        public void NoPosibleMove()
+        {
+            Console.WriteLine("Sorry there where no valid moves to make, we will now continue.");
         }
 
         public void CongratulationsMessage()
