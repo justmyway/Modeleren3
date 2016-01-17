@@ -20,6 +20,8 @@ namespace Barricade
         public bool Village { get; set; }
         public abstract bool MayEnter(Piece piece);
         public abstract void Enter(Piece piece);
+        public abstract bool MayPass();
+
         public abstract void RemovePiece(Piece piece);
     }
 }

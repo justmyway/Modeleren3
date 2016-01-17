@@ -18,6 +18,15 @@ namespace Barricade.Model.Fields
             return visiting_piece.Color != Piece.Color;
         }
 
+        public override bool MayPass()
+        {
+            if (Piece != null)
+                if (Piece.Color == Color.WHITE)
+                    return false;
+
+            return true;
+        }
+
         public override void Enter(Piece visiting_piece)
         {
             if (visiting_piece.Color != Piece.Color)
