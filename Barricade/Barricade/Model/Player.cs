@@ -10,17 +10,22 @@ namespace Barricade
     {
         public Color Color { get; }
         public List<Pawn> Pawns { get; }
-        private Forest _forest;
+        private Field _forest;
         private List<Field> _startFields;
 
-        public Player(Color color, List<Field> startFields, Forest forest) {
+        public Player(Color color) {
             Color = color;
-            _forest = forest;
-            _startFields = startFields;
+            
 
             //pieces maken
             //todo
             Pawns = new List<Pawn>();
+        }
+
+        public void AddStartAndForest(List<Field> startFields, Field forest)
+        {
+            _forest = forest;
+            _startFields = startFields;
         }
 
         public void RelocateToForest(Pawn pawn)

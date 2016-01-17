@@ -473,6 +473,11 @@ namespace Barricade
             tile1010.CorrespondingFields.Add(tile79);
             tile99.CorrespondingFields.Add(tile79);
             tile910.CorrespondingFields.Add(tile79);
+
+            gameModel.Players[0].AddStartAndForest(new List<Field>() { tile100, tile101, tile90, tile91 }, forest);
+            gameModel.Players[1].AddStartAndForest(new List<Field>() { tile103, tile104, tile93, tile94 }, forest);
+            gameModel.Players[2].AddStartAndForest(new List<Field>() { tile106, tile107, tile96, tile97 }, forest);
+            gameModel.Players[3].AddStartAndForest(new List<Field>() { tile109, tile1010, tile99, tile910 }, forest);
         }
     }
 }

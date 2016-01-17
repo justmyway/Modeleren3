@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Barricade.View
 {
-    public abstract class FieldView
+    public abstract class FieldView : ViewColor
     {
         public FieldView()
         {

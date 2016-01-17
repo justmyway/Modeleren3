@@ -32,6 +32,7 @@ namespace Barricade.View
                 }
                 else
                 {
+
                     return value + "P";
                 }
             }
