@@ -90,8 +90,8 @@ namespace Barricade.Controller
             {
                 FieldController controller = new FieldController();
                 List<Field> fields = new List<Field>();
-                posibleFields.AddRange(controller.CheckMoveOptions(pawn.Field,gameModel.Dice, fields, pawn));
-                //posibleFields.AddRange(controller.CheckMoveOptions(pawn.Field, 2, fields, pawn));
+                //posibleFields.AddRange(controller.CheckMoveOptions(pawn.Field,gameModel.Dice, fields, pawn));
+                posibleFields.AddRange(controller.CheckMoveOptions(pawn.Field, 2, fields, pawn));
             }
 
             gameModel.PosibleMoves = posibleFields;
@@ -450,7 +450,6 @@ namespace Barricade.Controller
             tile82.CorrespondingFields.Add(tile72);
             tile82.CorrespondingFields.Add(tile81);
             tile82.CorrespondingFields.Add(tile83);
-            tile83.CorrespondingFields.Add(tile73);//fout!! maar wat moet het zijn?
             tile83.CorrespondingFields.Add(tile82);
             tile83.CorrespondingFields.Add(tile84);
             tile84.CorrespondingFields.Add(tile83);
@@ -460,13 +459,12 @@ namespace Barricade.Controller
             tile85.CorrespondingFields.Add(tile86);
             tile86.CorrespondingFields.Add(tile85);
             tile86.CorrespondingFields.Add(tile87);
-            tile87.CorrespondingFields.Add(tile77);//deze zelfde
             tile87.CorrespondingFields.Add(tile86);
             tile87.CorrespondingFields.Add(tile88);
-            tile88.CorrespondingFields.Add(tile88);
+            tile88.CorrespondingFields.Add(tile78);//niet naar self
             tile88.CorrespondingFields.Add(tile87);
             tile88.CorrespondingFields.Add(tile89);
-            tile89.CorrespondingFields.Add(tile78);
+            tile89.CorrespondingFields.Add(tile88);//niet links omhoog
             tile89.CorrespondingFields.Add(tile810);
             tile810.CorrespondingFields.Add(tile89);
             tile810.CorrespondingFields.Add(tile710);
