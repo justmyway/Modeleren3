@@ -36,10 +36,15 @@ namespace Barricade.Controller
             //Nieghbour fields
             foreach (Field visitingfield in field.CorrespondingFields)
             {
+                Console.WriteLine(visitingfield);
                 if (previousField != visitingfield)
                 {
                     FieldController visitingController = new FieldController();
                     fields.AddRange(visitingController.CheckMoveOptions(visitingfield, movesLeft--, field, visitingPawn));
+                }
+                else
+                {
+                    Console.WriteLine("don't visit this field");
                 }
             }
 

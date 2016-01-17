@@ -147,7 +147,7 @@ namespace Barricade.Controller
 
         private void NextPlayer()
         {
-            gameModel.CurrentPlayer = gameModel.Players.Count >= gameModel.Players.IndexOf(gameModel.CurrentPlayer) + 1 ? gameModel.Players.First() : gameModel.Players[gameModel.Players.IndexOf(gameModel.CurrentPlayer) + 1];
+            gameModel.CurrentPlayer = gameModel.Players.Count == gameModel.Players.IndexOf(gameModel.CurrentPlayer) + 1 ? gameModel.Players.First() : gameModel.Players[gameModel.Players.IndexOf(gameModel.CurrentPlayer) + 1];
         }
 
         private void CongratulationsMessage()
