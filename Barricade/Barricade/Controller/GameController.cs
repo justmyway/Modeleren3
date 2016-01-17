@@ -41,7 +41,7 @@ namespace Barricade
 
             //Create the field
             CreateField();
-            gameView.Print(false);
+            gameView.Print();
         }
 
         public void Play()

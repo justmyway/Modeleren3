@@ -51,7 +51,7 @@ namespace Barricade.View
             fields = fieldViews;
         }
 
-        public void Print(bool showVisitable)
+        public void Print()
         {
             for (int y = 0; y < fields.GetLength(0); y++)
             {
@@ -59,7 +59,7 @@ namespace Barricade.View
                 {
                     if (fields[y,x] != null)
                     {
-                        fields[y, x].Print(showVisitable);
+                        fields[y, x].Print();
                     }
                     else
                     {
