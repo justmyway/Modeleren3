@@ -14,9 +14,10 @@ namespace Barricade.View
             Field = field;
         }
 
-        public override void Print()
+        public override void Print(bool showVisitable)
         {
-            Console.Write("F ");
+            Console.Write("F");
+            Console.Write(Field.VisitableOption);
         }
     }
 }
